@@ -4,7 +4,7 @@ export const BUSINESS_INFO = {
   phone: "+91 93059 72687",
   whatsapp: "919305972687",
   location: "Delhi, India",
-  email: "contact@divyanshweb.in",
+  email: "divyanshpandey5118@gmail.com",
   whatsappMessage: "Hello, I am interested in a website for my business. Can you share more details?"
 };
 

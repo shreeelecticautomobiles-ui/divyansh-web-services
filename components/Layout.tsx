@@ -102,33 +102,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-200 pt-12 pb-8 px-4">
+      <footer className="bg-black text-white pt-12 pb-24 md:pb-8 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">{BUSINESS_INFO.name}</h3>
-              <p className="text-gray-600 mb-4">
-                Simple, fast, and mobile-friendly websites for local businesses in Delhi and nearby areas.
+              <h3 className="text-xl font-bold text-white mb-4">{BUSINESS_INFO.name}</h3>
+              <p className="text-gray-400 mb-4">
+                Simple, fast, and mobile-friendly websites for local businesses in Delhi and nearby areas. We bring your shop online in 48 hours.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-600">
+              <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-gray-400">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link to={link.path} className="hover:text-blue-600">{link.name}</Link>
+                    <Link to={link.path} className="hover:text-blue-400 transition-colors">{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Contact Us</h4>
-              <p className="text-gray-600 mb-2">📍 {BUSINESS_INFO.location}</p>
-              <p className="text-gray-600 mb-2">📞 {BUSINESS_INFO.phone}</p>
-              <p className="text-gray-600">✉️ {BUSINESS_INFO.email}</p>
+              <h4 className="font-semibold text-white mb-4">Contact Details</h4>
+              <p className="text-gray-400 mb-2 flex items-center gap-2">📍 {BUSINESS_INFO.location}</p>
+              <p className="text-gray-400 mb-2 flex items-center gap-2">📞 {BUSINESS_INFO.phone}</p>
+              <p className="text-gray-400 flex items-center gap-2">✉️ {BUSINESS_INFO.email}</p>
             </div>
           </div>
-          <div className="text-center pt-8 border-t border-gray-200">
+          <div className="text-center pt-8 border-t border-gray-800">
             <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved.
             </p>
@@ -137,7 +137,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </footer>
 
       {/* Persistent Floating Contact Buttons for Mobile */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 grid grid-cols-2 gap-3 z-50">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 grid grid-cols-2 gap-3 z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.1)]">
         <a 
           href={`tel:${BUSINESS_INFO.phone}`} 
           className="flex items-center justify-center gap-2 py-3 bg-blue-600 text-white rounded-lg font-bold text-sm shadow-lg"
