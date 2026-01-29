@@ -19,6 +19,13 @@ const Demos: React.FC = () => {
       features: ["Doctor Schedules", "Service List", "Clinic Location Map"]
     },
     {
+      type: "Dental Clinic",
+      title: "Bhagwat Dental Clinic",
+      url: "https://bhagwat-dental-clinic.vercel.app/",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600",
+      features: ["Appointment Requests", "Service Gallery", "Expert Dental Care Info"]
+    },
+    {
       type: "EV Showroom",
       title: "Shree Electric Automobiles",
       url: "https://shreeelectric.in/",
