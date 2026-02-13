@@ -5,108 +5,111 @@ import { BUSINESS_INFO } from '../constants';
 const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your inquiry. We will contact you soon!");
+    alert("Inquiry received. A specialist will reach out to you within 2 hours.");
   };
 
   return (
-    <div className="py-16 px-4 bg-gray-50">
-      <div className="container mx-auto max-w-5xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div className="py-24 px-4 bg-[#0b0b0b]">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {/* Contact Details */}
           <div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
-            <p className="text-lg text-gray-600 mb-10">
-              Looking for a simple website for your business? We are here to help. Get in touch via any of the following:
+            <h1 className="text-5xl font-black text-white mb-8 tracking-tight">Get In Touch.</h1>
+            <p className="text-xl text-zinc-400 mb-16 font-medium leading-relaxed">
+              We operate with high availability. Reach out via your preferred channel for an immediate response.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl">
+            <div className="space-y-12">
+              <div className="flex items-center gap-6 group">
+                <div className="w-16 h-16 bg-zinc-900 text-blue-500 rounded-2xl flex items-center justify-center text-2xl border border-zinc-800 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-xl">
                   📞
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">Call Directly</h3>
-                  <a href={`tel:${BUSINESS_INFO.phone}`} className="text-blue-600 text-lg hover:underline font-semibold">{BUSINESS_INFO.phone}</a>
+                  <h3 className="font-bold text-white uppercase tracking-widest text-xs opacity-60 mb-1">Direct Line</h3>
+                  <a href={`tel:${BUSINESS_INFO.phone}`} className="text-blue-500 text-2xl hover:text-blue-400 font-black transition-colors">{BUSINESS_INFO.phone}</a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xl">
+              <div className="flex items-center gap-6 group">
+                <div className="w-16 h-16 bg-zinc-900 text-green-500 rounded-2xl flex items-center justify-center text-2xl border border-zinc-800 group-hover:bg-green-600 group-hover:text-white transition-all shadow-xl">
                   💬
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">WhatsApp</h3>
+                  <h3 className="font-bold text-white uppercase tracking-widest text-xs opacity-60 mb-1">WhatsApp Fast-Track</h3>
                   <a 
                     href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=${encodeURIComponent(BUSINESS_INFO.whatsappMessage)}`} 
-                    className="text-green-600 text-lg hover:underline font-semibold"
+                    className="text-green-500 text-2xl hover:text-green-400 font-black transition-colors"
                   >
-                    Message on WhatsApp
+                    Open Messenger
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gray-100 text-gray-600 rounded-full flex items-center justify-center text-xl">
+              <div className="flex items-center gap-6 group">
+                <div className="w-16 h-16 bg-zinc-900 text-zinc-400 rounded-2xl flex items-center justify-center text-2xl border border-zinc-800 group-hover:bg-zinc-700 group-hover:text-white transition-all shadow-xl">
                   📍
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900">Location</h3>
-                  <p className="text-gray-600">{BUSINESS_INFO.location} & nearby areas</p>
+                  <h3 className="font-bold text-white uppercase tracking-widest text-xs opacity-60 mb-1">Base of Operations</h3>
+                  <p className="text-zinc-200 text-xl font-bold">{BUSINESS_INFO.location} & NCR</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-blue-600 text-white rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold mb-2">Service Area:</h3>
-              <p>We serve all areas in Delhi, Noida, Gurgaon, and Ghaziabad. We can also visit your shop or office for discussion.</p>
+            <div className="mt-16 p-10 bg-zinc-900 rounded-3xl border border-zinc-800 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-4 opacity-10 text-8xl grayscale">🇮🇳</div>
+              <h3 className="text-2xl font-bold text-white mb-4 relative z-10">Regional Availability:</h3>
+              <p className="text-zinc-400 leading-relaxed relative z-10 font-medium">
+                Active deployments across <span className="text-white">Delhi, Noida, Gurgaon, & Ghaziabad</span>. On-site consultations available for high-scale retail projects.
+              </p>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+          <div className="bg-zinc-900/50 p-10 md:p-14 rounded-3xl border border-zinc-800 shadow-3xl">
+            <h2 className="text-3xl font-bold text-white mb-10 tracking-tight">Project Inquiry.</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">Full Name</label>
                 <input 
                   type="text" 
                   required
                   placeholder="e.g. Rahul Sharma"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  className="w-full bg-zinc-950 px-6 py-5 border border-zinc-800 rounded-xl text-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none placeholder:text-zinc-700 transition"
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">Contact Number</label>
                 <input 
                   type="tel" 
                   required
-                  placeholder="e.g. 93059 72687"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  placeholder="e.g. +91 93059 72687"
+                  className="w-full bg-zinc-950 px-6 py-5 border border-zinc-800 rounded-xl text-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none placeholder:text-zinc-700 transition"
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Business Type</label>
-                <select className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
-                  <option>Coaching Center</option>
-                  <option>Clinic / Hospital</option>
-                  <option>Showroom</option>
-                  <option>Local Shop</option>
-                  <option>Other Service</option>
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">Venture Type</label>
+                <select className="w-full bg-zinc-950 px-6 py-5 border border-zinc-800 rounded-xl text-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none appearance-none transition cursor-pointer">
+                  <option className="bg-zinc-900">Coaching / Educational</option>
+                  <option className="bg-zinc-900">Medical / Clinic</option>
+                  <option className="bg-zinc-900">Automotive Showroom</option>
+                  <option className="bg-zinc-900">Retail Store</option>
+                  <option className="bg-zinc-900">Service Professional</option>
                 </select>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Your Message (Optional)</label>
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-zinc-500 uppercase tracking-widest ml-1">Strategic Goals</label>
                 <textarea 
                   rows={4}
-                  placeholder="How can we help you?"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                  placeholder="Describe your vision for the website..."
+                  className="w-full bg-zinc-950 px-6 py-5 border border-zinc-800 rounded-xl text-white focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none placeholder:text-zinc-700 transition"
                 ></textarea>
               </div>
               <button 
                 type="submit"
-                className="w-full py-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition"
+                className="w-full py-5 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-500 transition shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:scale-[1.02] transform active:scale-95"
               >
-                Send Inquiry
+                Submit Project Brief
               </button>
             </form>
           </div>

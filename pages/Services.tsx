@@ -4,28 +4,27 @@ import { BUSINESS_INFO } from '../constants';
 
 const Services: React.FC = () => {
   return (
-    <div className="py-16 px-4 bg-white">
-      <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-          <p className="text-lg text-gray-600">Everything you need to get your business online today.</p>
+    <div className="py-24 px-4 bg-[#0b0b0b]">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-20">
+          <h1 className="text-5xl font-extrabold text-white mb-6 tracking-tight">Our Solutions</h1>
+          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">Scale your business with our battle-tested website architectures.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Service 1 */}
-          <div className="border border-gray-200 rounded-2xl p-8 flex flex-col h-full hover:border-blue-300 transition-colors shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">One-Page Website</h2>
-            <ul className="space-y-3 text-gray-600 mb-8 flex-grow">
-              <li className="flex items-center gap-2">✅ Mobile-friendly design</li>
-              <li className="flex items-center gap-2">✅ WhatsApp & Call buttons</li>
-              <li className="flex items-center gap-2">✅ Google Maps location</li>
-              <li className="flex items-center gap-2">✅ Business info & timing</li>
-              <li className="flex items-center gap-2">✅ Delivery in 48 hours</li>
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-10 flex flex-col h-full hover:border-blue-500/50 transition-all group">
+            <h2 className="text-2xl font-bold text-white mb-6">Digital Business Card</h2>
+            <ul className="space-y-4 text-zinc-400 mb-10 flex-grow">
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Mobile-optimized view</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> WhatsApp integration</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Google Maps location</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Rapid 48-hour launch</li>
             </ul>
-            <div className="pt-6 border-t border-gray-100">
+            <div className="pt-8 border-t border-zinc-800">
               <a 
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=I want to know about One-Page Website`}
-                className="block w-full text-center py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700"
+                className="block w-full text-center py-4 bg-zinc-800 text-white rounded-xl font-bold hover:bg-zinc-700 border border-zinc-700 transition"
               >
                 Inquire Now
               </a>
@@ -33,42 +32,42 @@ const Services: React.FC = () => {
           </div>
 
           {/* Service 2 */}
-          <div className="border border-gray-200 rounded-2xl p-8 flex flex-col h-full hover:border-blue-300 transition-colors shadow-sm bg-blue-50/30">
-            <div className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full w-fit mb-4">MOST POPULAR</div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Multi-Page Website</h2>
-            <ul className="space-y-3 text-gray-600 mb-8 flex-grow">
-              <li className="flex items-center gap-2">✅ Home, Services, Contact, About</li>
-              <li className="flex items-center gap-2">✅ Detailed service descriptions</li>
-              <li className="flex items-center gap-2">✅ Professional look & feel</li>
-              <li className="flex items-center gap-2">✅ Better for growing businesses</li>
-              <li className="flex items-center gap-2">✅ WhatsApp integrated</li>
+          <div className="bg-zinc-900 border-2 border-blue-600 rounded-2xl p-10 flex flex-col h-full relative shadow-[0_0_40px_rgba(37,99,235,0.1)]">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider">PREMIUM REACH</div>
+            <h2 className="text-2xl font-bold text-white mb-6">Full Business Suite</h2>
+            <ul className="space-y-4 text-zinc-300 mb-10 flex-grow">
+              <li className="flex items-center gap-3 font-semibold"><span className="text-blue-500 font-bold">✓</span> Multi-page Experience</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Portfolio/Service Gallery</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Enhanced SEO structure</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Analytics Tracking</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Dedicated Lead Support</li>
             </ul>
-            <div className="pt-6 border-t border-gray-100">
+            <div className="pt-8 border-t border-zinc-800">
               <a 
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=I want to know about Multi-Page Website`}
-                className="block w-full text-center py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700"
+                className="block w-full text-center py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.3)] transition"
               >
-                Inquire Now
+                Get Started
               </a>
             </div>
           </div>
 
           {/* Service 3 */}
-          <div className="border border-gray-200 rounded-2xl p-8 flex flex-col h-full hover:border-blue-300 transition-colors shadow-sm">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Domain & Setup</h2>
-            <ul className="space-y-3 text-gray-600 mb-8 flex-grow">
-              <li className="flex items-center gap-2">✅ Business name domain (.in / .com)</li>
-              <li className="flex items-center gap-2">✅ Professional email setup</li>
-              <li className="flex items-center gap-2">✅ Website linked properly</li>
-              <li className="flex items-center gap-2">✅ SSL security certificate</li>
-              <li className="flex items-center gap-2">✅ Full ownership control</li>
+          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-10 flex flex-col h-full hover:border-blue-500/50 transition-all">
+            <h2 className="text-2xl font-bold text-white mb-6">Tech Foundation</h2>
+            <ul className="space-y-4 text-zinc-400 mb-10 flex-grow">
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Custom Domain (.com/.in)</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Business Email Setup</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> SSL Security (HTTPS)</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Cloud Hosting Configuration</li>
+              <li className="flex items-center gap-3"><span className="text-blue-500 font-bold">✓</span> Full Backend Access</li>
             </ul>
-            <div className="pt-6 border-t border-gray-100">
+            <div className="pt-8 border-t border-zinc-800">
               <a 
                 href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=I want to know about Domain and Setup`}
-                className="block w-full text-center py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700"
+                className="block w-full text-center py-4 bg-zinc-800 text-white rounded-xl font-bold hover:bg-zinc-700 border border-zinc-700 transition"
               >
-                Inquire Now
+                Configure Setup
               </a>
             </div>
           </div>

@@ -5,26 +5,30 @@ import { BUSINESS_INFO, ROUTES } from '../constants';
 
 const Home: React.FC = () => {
   return (
-    <div className="pb-20 md:pb-0">
+    <div className="pb-20 md:pb-0 bg-[#0b0b0b]">
       {/* Hero Section */}
-      <section className="bg-white py-16 md:py-24 px-4 text-center border-b border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
-            Simple Websites for <span className="text-blue-600">Local Businesses</span>
+      <section className="relative overflow-hidden py-24 md:py-32 px-4 text-center">
+        {/* Subtle Gradient Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(37,99,235,0.08)_0%,_transparent_70%)] pointer-events-none"></div>
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tighter leading-tight">
+            Simple Websites for <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Local Businesses</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            Helping clinics, coaching centers and local shops get online with clean, mobile-friendly websites that bring real inquiries.
+          <p className="text-xl md:text-2xl text-zinc-400 mb-12 max-w-2xl mx-auto font-medium">
+            Helping clinics, coaching centers and local shops dominate their local market with clean, high-performance websites.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a 
               href={`tel:${BUSINESS_INFO.phone}`} 
-              className="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold text-lg shadow-md hover:bg-blue-700 transition"
+              className="px-10 py-5 bg-zinc-900 text-white rounded-lg font-bold text-lg shadow-xl hover:bg-zinc-800 transition border border-zinc-700 flex items-center justify-center gap-2"
             >
-              📞 Call Now
+              📞 Direct Call
             </a>
             <a 
               href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=${encodeURIComponent(BUSINESS_INFO.whatsappMessage)}`}
-              className="px-8 py-4 bg-green-500 text-white rounded-lg font-bold text-lg shadow-md hover:bg-green-600 transition"
+              className="px-10 py-5 bg-blue-600 text-white rounded-lg font-bold text-lg shadow-[0_0_25px_rgba(37,99,235,0.4)] hover:bg-blue-500 transition hover:scale-105 transform flex items-center justify-center gap-2"
             >
               💬 WhatsApp Now
             </a>
@@ -33,51 +37,54 @@ const Home: React.FC = () => {
       </section>
 
       {/* What We Do */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-zinc-900/50">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">What We Do</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">What We Do</h2>
+            <p className="text-zinc-400 max-w-xl mx-auto">We focus on the metrics that matter: speed, mobile-experience, and conversion.</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard 
               icon="📱" 
-              title="Works on Mobile" 
-              desc="Your customers use phones. We make sure your website looks perfect on every screen." 
+              title="Mobile First" 
+              desc="Optimized for the devices 90% of your customers use. Perfect on every iPhone and Android." 
             />
             <FeatureCard 
               icon="📍" 
-              title="Google Maps Included" 
-              desc="Help customers find your exact shop or clinic location easily with integrated maps." 
+              title="Maps Optimized" 
+              desc="Directly integrated Google Maps so clients navigate to your clinic or shop in one tap." 
             />
             <FeatureCard 
               icon="⚡" 
-              title="48 Hour Delivery" 
-              desc="We don't make you wait. Get your professional business website ready in just 2 days." 
+              title="Turbo Delivery" 
+              desc="We build fast and deliver faster. Your new digital identity goes live in exactly 48 hours." 
             />
             <FeatureCard 
               icon="📞" 
-              title="Direct Contact Buttons" 
-              desc="One-tap Call and WhatsApp buttons so customers can reach you instantly." 
+              title="One-Tap Contact" 
+              desc="Smart call and messaging floating actions that convert passive visitors into active leads." 
             />
             <FeatureCard 
-              icon="📄" 
-              title="Simple & Clear" 
-              desc="No confusing designs. Just clear information about your business that builds trust." 
+              icon="💎" 
+              title="Premium Clean" 
+              desc="Minimalist designs that emphasize your services without technical clutter or distraction." 
             />
             <FeatureCard 
-              icon="🏠" 
-              title="Local Support" 
-              desc="Based in Delhi. We understand your business needs and provide personal attention." 
+              icon="🛡️" 
+              title="Personal Trust" 
+              desc="No bots. No call centers. Talk directly to the engineer building your business future." 
             />
           </div>
         </div>
       </section>
 
       {/* Who This Is For */}
-      <section className="py-16 px-4 bg-white">
+      <section className="py-24 px-4 bg-[#0b0b0b] border-y border-zinc-900">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Who This Is For</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Coaching Centers', 'Clinics & Diagnostic Centers', 'EV Scooter / E-Rickshaw Showrooms', 'Local Shops', 'Service Providers'].map((item) => (
-              <span key={item} className="px-6 py-3 bg-blue-50 text-blue-700 rounded-full font-semibold border border-blue-100">
+          <h2 className="text-3xl font-bold mb-16 text-white uppercase tracking-widest text-sm opacity-60">Industry Specialists</h2>
+          <div className="flex flex-wrap justify-center gap-6">
+            {['Coaching Centers', 'Clinics & Diagnostics', 'EV Showrooms', 'Local Retail', 'Salons & Spas', 'Personal Brands'].map((item) => (
+              <span key={item} className="px-8 py-4 bg-zinc-900 text-zinc-300 rounded-xl font-bold border border-zinc-800 hover:border-blue-500/50 hover:text-blue-400 transition-all cursor-default">
                 {item}
               </span>
             ))}
@@ -86,33 +93,33 @@ const Home: React.FC = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-24 px-4 bg-zinc-900/30">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Divyansh Web Services</h2>
-          <ul className="space-y-6">
-            <WhyUsItem title="Local service provider" desc="We are available for face-to-face meetings and understand the Delhi market." />
-            <WhyUsItem title="Fast 48-hour delivery" desc="Get online quickly without unnecessary delays." />
-            <WhyUsItem title="Simple & clean design" desc="Your customers will find exactly what they need without confusion." />
-            <WhyUsItem title="No technical headache" desc="We handle everything. You just focus on your business." />
-            <WhyUsItem title="Personal support" desc="Direct access to the designer for any changes or help." />
+          <h2 className="text-4xl font-bold text-center mb-16 text-white">The Divyansh Advantage</h2>
+          <ul className="space-y-10">
+            <WhyUsItem title="Hyper-Local Focus" desc="We understand the Delhi/NCR market dynamics better than anyone else." />
+            <WhyUsItem title="Zero Latency Execution" desc="Your business doesn't wait. Neither do we. Get live in a weekend." />
+            <WhyUsItem title="Conversion Obsessed" desc="We don't just build sites; we build inquiry-generating machines." />
+            <WhyUsItem title="Maintenance Free" desc="Our robust architecture means you never worry about crashes or hacks." />
           </ul>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-700 text-white text-center">
-        <div className="container mx-auto max-w-2xl">
-          <h2 className="text-3xl font-bold mb-6">Want a simple website like this for your business?</h2>
-          <p className="text-xl mb-10 opacity-90">Get a professional online presence that brings real customers.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to={ROUTES.demos} className="px-8 py-4 bg-white text-blue-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
-              View Demo Websites
+      <section className="py-32 px-4 bg-blue-600 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,_rgba(255,255,255,0.05)_25%,_transparent_25%,_transparent_50%,_rgba(255,255,255,0.05)_50%,_rgba(255,255,255,0.05)_75%,_transparent_75%,_transparent)] bg-[length:100px_100px] opacity-20"></div>
+        <div className="container mx-auto max-w-3xl relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">Elevate Your Local Presence To Premium Levels.</h2>
+          <p className="text-xl mb-12 opacity-90 font-medium italic">Stop losing customers to your competitors just because they have a better website.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Link to={ROUTES.demos} className="px-10 py-5 bg-white text-blue-700 rounded-lg font-extrabold text-lg hover:bg-zinc-100 transition hover:scale-105 transform shadow-2xl">
+              👀 Browse Recent Projects
             </Link>
             <a 
               href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=${encodeURIComponent(BUSINESS_INFO.whatsappMessage)}`}
-              className="px-8 py-4 bg-green-500 text-white rounded-lg font-bold text-lg hover:bg-green-600 transition"
+              className="px-10 py-5 bg-zinc-900 text-white rounded-lg font-extrabold text-lg hover:bg-black transition hover:scale-105 transform shadow-2xl"
             >
-              Contact on WhatsApp
+              🚀 Launch My Site
             </a>
           </div>
         </div>
@@ -122,23 +129,23 @@ const Home: React.FC = () => {
 };
 
 const FeatureCard = ({ icon, title, desc }: { icon: string, title: string, desc: string }) => (
-  <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
-    <div className="text-4xl mb-4">{icon}</div>
-    <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-    <p className="text-gray-600 leading-relaxed">{desc}</p>
+  <div className="bg-zinc-900 p-10 rounded-2xl border border-zinc-800 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(37,99,235,0.15)] transition-all group">
+    <div className="text-5xl mb-6 group-hover:scale-110 transition-transform inline-block">{icon}</div>
+    <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{title}</h3>
+    <p className="text-zinc-400 leading-relaxed font-medium">{desc}</p>
   </div>
 );
 
 const WhyUsItem = ({ title, desc }: { title: string, desc: string }) => (
-  <li className="flex gap-4 items-start">
-    <div className="bg-blue-100 text-blue-700 p-2 rounded-full mt-1">
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <li className="flex gap-6 items-start group">
+    <div className="bg-blue-600/10 text-blue-500 p-3 rounded-xl border border-blue-500/20 group-hover:bg-blue-600 group-hover:text-white transition-all">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
       </svg>
     </div>
     <div>
-      <h4 className="text-lg font-bold text-gray-900">{title}</h4>
-      <p className="text-gray-600">{desc}</p>
+      <h4 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">{title}</h4>
+      <p className="text-zinc-400 leading-relaxed">{desc}</p>
     </div>
   </li>
 );
