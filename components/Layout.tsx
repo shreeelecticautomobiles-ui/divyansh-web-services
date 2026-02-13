@@ -39,14 +39,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled 
-            ? 'py-4 bg-black/40 backdrop-blur-2xl border-b border-white/5' 
+            ? 'py-4 bg-black/60 backdrop-blur-2xl border-b border-white/10' 
             : 'py-8 bg-transparent'
         }`}
       >
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
-          <Link to="/" className="group" onClick={() => setIsMenuOpen(false)}>
-            <span className="text-xl md:text-2xl font-black tracking-tighter transition-all duration-500 group-hover:text-blue-500 uppercase">
-              DIVYANSH <span className="text-blue-500">WEB SERVICES.</span>
+          <Link to="/" className="group flex items-center" onClick={() => setIsMenuOpen(false)}>
+            <span className="text-2xl md:text-3xl font-[900] tracking-tighter transition-all duration-500 group-hover:text-blue-400 uppercase leading-none">
+              <span className="text-white">DIVYANSH</span>
+              <br className="md:hidden" />
+              <span className="text-blue-500 md:ml-2">WEB SERVICES</span>
+              <span className="text-white">.</span>
             </span>
           </Link>
 
@@ -115,7 +118,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
             <div className="md:col-span-2">
-              <h3 className="text-2xl md:text-3xl font-black mb-8 tracking-tighter uppercase">DIVYANSH <span className="text-blue-500">WEB SERVICES.</span></h3>
+              <h3 className="text-3xl md:text-4xl font-[900] mb-8 tracking-tighter uppercase leading-tight">
+                <span className="text-white">DIVYANSH</span><br/>
+                <span className="text-blue-500">WEB SERVICES.</span>
+              </h3>
               <p className="text-zinc-500 text-xl leading-relaxed max-w-md font-medium">
                 Designing and engineering digital experiences that define the future of local commerce. One pixel at a time.
               </p>

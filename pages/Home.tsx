@@ -129,7 +129,7 @@ const Home: React.FC = () => {
             DOMINATE YOUR <br/> <span className="text-blue-500">LOCAL MARKET.</span>
           </h2>
           <p className="text-zinc-500 text-2xl mb-16 max-w-3xl mx-auto font-medium">
-            Stop losing customers to outdated websites. Upgrade your brand to the Divyansh Web Services standard today.
+            Stop losing customers to outdated websites. Upgrade your brand to the <span className="text-white font-black uppercase">Divyansh Web Services</span> standard today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-10">
             <a 
