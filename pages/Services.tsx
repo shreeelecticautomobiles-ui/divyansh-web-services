@@ -4,32 +4,32 @@ import { BUSINESS_INFO } from '../constants';
 
 const Services: React.FC = () => {
   return (
-    <div className="py-32 px-6">
+    <div className="py-40 px-6">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-32">
-          <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter">Solutions<span className="text-blue-500">.</span></h1>
-          <p className="text-xl text-zinc-500 max-w-xl mx-auto font-medium">High-end architecture tailored for local business dominance.</p>
+        <div className="text-center mb-32 animate-fade-up">
+          <h1 className="text-6xl md:text-9xl font-black tracking-tighter mb-8">SOLUTIONS<span className="text-blue-500">.</span></h1>
+          <p className="text-zinc-500 text-xl max-w-2xl mx-auto font-medium">High-caliber digital architecture for businesses that refuse to look ordinary.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <ServiceTier 
-            title="Essential"
+          <TierCard 
+            title="Core Presence"
             price="2,000"
-            desc="One-page power for emerging businesses."
-            features={["Fast-track 48h launch", "Mobile optimization", "WhatsApp integration", "Google Maps setup"]}
+            desc="One-page excellence for focused local impact."
+            features={["Fast-track 48h launch", "Mobile-first experience", "Maps integration", "WhatsApp bridge"]}
           />
-          <ServiceTier 
-            title="Professional"
+          <TierCard 
+            title="Elite Suite"
             price="4,000"
             highlight={true}
-            desc="The industry standard for established clinics."
-            features={["Multi-page architecture", "Premium .com/.in domain", "Custom Branding", "Advanced SEO suite", "Cloud Hosting"]}
+            desc="Multi-page ecosystem for clinics and institutes."
+            features={["Full Site Architecture", "Custom .in/.com Domain", "Premium Identity Design", "Cloud Optimization", "Priority Support"]}
           />
-          <ServiceTier 
-            title="Enterprise"
+          <TierCard 
+            title="Custom Scale"
             price="Custom"
-            desc="Tailored solutions for complex retail."
-            features={["Inventory systems", "E-commerce engine", "On-site consulting", "Dedicated support line", "API Integrations"]}
+            desc="Tailored enterprise tools for heavy retail."
+            features={["Inventory Engines", "Booking Automations", "API Architectures", "Dedicated Consultation"]}
           />
         </div>
       </div>
@@ -37,43 +37,44 @@ const Services: React.FC = () => {
   );
 };
 
-const ServiceTier = ({ title, price, desc, features, highlight = false }: any) => (
-  <div className={`relative p-12 rounded-[40px] border transition-all duration-500 flex flex-col ${
+const TierCard = ({ title, price, desc, features, highlight = false }: any) => (
+  <div className={`p-14 rounded-[48px] border transition-all duration-500 relative flex flex-col ${
     highlight 
       ? 'bg-white text-black border-transparent scale-105 z-10 shadow-[0_40px_100px_rgba(255,255,255,0.05)]' 
-      : 'bg-zinc-900/40 backdrop-blur-xl border-zinc-800 text-white hover:border-blue-500/50'
+      : 'bg-zinc-900/30 backdrop-blur-xl border-white/5 text-white hover:border-blue-500/50'
   }`}>
     {highlight && (
-      <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-blue-600 text-white text-[10px] font-black rounded-full uppercase tracking-widest shadow-xl">
-        Most Requested
+      <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 bg-blue-600 text-white text-[9px] font-black rounded-full uppercase tracking-[0.3em] shadow-xl">
+        Industry Favorite
       </div>
     )}
-    <h2 className="text-2xl font-black tracking-tight mb-2">{title}</h2>
-    <p className={`text-sm mb-10 ${highlight ? 'text-zinc-600' : 'text-zinc-500'} font-medium`}>{desc}</p>
     
-    <div className="flex items-baseline gap-2 mb-12">
-      <span className="text-5xl font-black">{price !== 'Custom' && '₹'}{price}</span>
-      <span className={`text-[11px] font-bold uppercase tracking-widest ${highlight ? 'text-zinc-400' : 'text-zinc-600'}`}>One-Time</span>
+    <h2 className="text-3xl font-black tracking-tighter mb-3">{title}</h2>
+    <p className={`text-sm mb-12 font-semibold ${highlight ? 'text-zinc-500' : 'text-zinc-600'}`}>{desc}</p>
+    
+    <div className="flex items-baseline gap-2 mb-16">
+      <span className="text-6xl font-black">{price !== 'Custom' && '₹'}{price}</span>
+      <span className={`text-[10px] font-black uppercase tracking-widest ${highlight ? 'text-zinc-400' : 'text-zinc-700'}`}>One-Time Investment</span>
     </div>
 
-    <ul className="space-y-6 flex-grow mb-16">
+    <ul className="space-y-6 flex-grow mb-16 font-bold text-sm">
       {features.map((f: string) => (
-        <li key={f} className="flex items-center gap-4 text-sm font-semibold">
-          <span className={`w-1.5 h-1.5 rounded-full ${highlight ? 'bg-blue-600' : 'bg-blue-500'}`}></span>
+        <li key={f} className="flex items-center gap-4">
+          <span className={`w-2 h-2 rounded-full ${highlight ? 'bg-blue-600' : 'bg-blue-500'}`}></span>
           {f}
         </li>
       ))}
     </ul>
 
     <a 
-      href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=I am interested in the ${title} package`}
-      className={`block w-full text-center py-5 rounded-2xl font-black text-sm transition-all active:scale-95 ${
+      href={`https://wa.me/${BUSINESS_INFO.whatsapp}?text=I want to discuss the ${title} tier`}
+      className={`block w-full text-center py-6 rounded-2xl font-black text-[13px] uppercase tracking-widest transition-all duration-300 ${
         highlight 
           ? 'bg-black text-white hover:bg-zinc-800' 
-          : 'bg-white text-black hover:bg-blue-500 hover:text-white'
+          : 'bg-white text-black hover:bg-blue-600 hover:text-white'
       }`}
     >
-      Reserve Now
+      Reserve Project slot
     </a>
   </div>
 );

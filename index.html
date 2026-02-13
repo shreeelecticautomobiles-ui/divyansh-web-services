@@ -4,9 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divyansh Web Services | Luxury Digital Agency</title>
+    <title>Divyansh Agency | Elite Digital Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
       :root {
         color-scheme: dark;
@@ -22,9 +22,9 @@
         padding: 0;
         overflow-x: hidden;
       }
-      /* Custom Scrollbar for Luxury Feel */
+      /* Premium Scrollbar */
       ::-webkit-scrollbar {
-        width: 8px;
+        width: 6px;
       }
       ::-webkit-scrollbar-track {
         background: #0b0b0b;
@@ -34,18 +34,29 @@
         border-radius: 10px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #333;
+        background: #3b82f6;
       }
-      * {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      /* Custom Animations */
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
       }
-      .mesh-glow {
-        position: absolute;
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
-        pointer-events: none;
-        z-index: 0;
+      .animate-fade-up {
+        animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #fff 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glow-blue:hover {
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
       }
     </style>
   <script type="importmap">
