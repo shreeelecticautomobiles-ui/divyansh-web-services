@@ -45,8 +45,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       >
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
           <Link to="/" className="group" onClick={() => setIsMenuOpen(false)}>
-            <span className="text-2xl font-black tracking-tighter transition-all duration-500 group-hover:text-blue-500">
-              DIVYANSH<span className="text-blue-500">.</span>
+            <span className="text-xl md:text-2xl font-black tracking-tighter transition-all duration-500 group-hover:text-blue-500 uppercase">
+              DIVYANSH <span className="text-blue-500">WEB SERVICES.</span>
             </span>
           </Link>
 
@@ -115,7 +115,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
             <div className="md:col-span-2">
-              <h3 className="text-3xl font-black mb-8 tracking-tighter">DIVYANSH<span className="text-blue-500">.</span></h3>
+              <h3 className="text-2xl md:text-3xl font-black mb-8 tracking-tighter uppercase">DIVYANSH <span className="text-blue-500">WEB SERVICES.</span></h3>
               <p className="text-zinc-500 text-xl leading-relaxed max-w-md font-medium">
                 Designing and engineering digital experiences that define the future of local commerce. One pixel at a time.
               </p>
@@ -148,8 +148,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           
           <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
-            <p className="text-[10px] text-zinc-800 font-black tracking-[0.3em] uppercase">
-              © {new Date().getFullYear()} DIVYANSH DIGITAL. ALL RIGHTS RESERVED.
+            <p className="text-[10px] text-zinc-800 font-black tracking-[0.3em] uppercase text-center md:text-left">
+              © {new Date().getFullYear()} DIVYANSH WEB SERVICES. ALL RIGHTS RESERVED.
             </p>
             <div className="flex gap-12">
                <span className="text-[10px] text-zinc-800 font-black tracking-widest cursor-default">PRIVACY</span>
