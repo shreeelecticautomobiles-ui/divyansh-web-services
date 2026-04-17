@@ -34,9 +34,9 @@ const Home: React.FC = () => {
             </a>
             <Link 
               to={ROUTES.demos}
-              className="px-14 py-7 bg-zinc-950 border border-zinc-900 text-white rounded-2xl font-black text-xl transition-all duration-300 hover:bg-zinc-900 hover:border-zinc-800 group flex items-center gap-3"
+              className="px-14 py-7 bg-red-600 border border-red-700 text-white rounded-2xl font-black text-xl transition-all duration-500 hover:scale-105 hover:bg-red-700 hover:border-red-800 group flex items-center gap-3 shadow-3xl shadow-red-600/40"
             >
-              Explore Portfolio <span className="group-hover:translate-x-2 transition-transform">→</span>
+              See All Demos <span className="group-hover:translate-x-2 transition-transform">→</span>
             </Link>
           </div>
         </div>
