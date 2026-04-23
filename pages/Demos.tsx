@@ -45,6 +45,12 @@ const Demos: React.FC = () => {
       title: "Wow Unisex Saloon",
       url: "https://wow-unisex-saloon.vercel.app/",
       image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      type: "MARKETING",
+      title: "Divyansh Ads",
+      url: "https://divyanshads.in/",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     }
   ];
 
