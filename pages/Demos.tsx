@@ -13,6 +13,18 @@ const Demos: React.FC = () => {
       highlight: true
     },
     {
+      type: "EDUCATION",
+      title: "English Journey Institute",
+      url: "https://englishjourneyinstitute.in/",
+      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
+      type: "ACADEMY",
+      title: "Skill Mentor Academy",
+      url: "https://skillmentoracademy.com/",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200",
+    },
+    {
       type: "BUSINESS",
       title: "Shree Electric Automobiles",
       url: "https://shreeelectric.in/",
@@ -66,18 +78,6 @@ const Demos: React.FC = () => {
           <p className="text-zinc-400 text-xl md:text-2xl font-semibold mb-12">
             👇 Click on any demo below to view the full website
           </p>
-          
-          {/* Quick Access for Coaching */}
-          <div className="mb-12">
-            <a 
-              href={demos[0].url}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-4 px-10 py-5 bg-green-600 hover:bg-green-500 text-white rounded-2xl font-black text-xl md:text-2xl transition-all duration-300 shadow-xl shadow-green-600/20 hover:scale-105"
-            >
-              🏫 For Coaching Institutes – Click here
-            </a>
-          </div>
         </div>
 
         {/* Demos Grid */}
@@ -128,18 +128,6 @@ const Demos: React.FC = () => {
                   </div>
                 </div>
               </a>
-              
-              {/* Direct Link text */}
-              <div className="px-4">
-                <a 
-                  href={demo.url} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="text-zinc-500 hover:text-blue-500 font-medium break-all transition-colors inline-flex items-center gap-2"
-                >
-                  🔗 Live Link: <span className="underline">{demo.url}</span>
-                </a>
-              </div>
             </div>
           ))}
         </div>
