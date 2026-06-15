@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BUSINESS_INFO } from '../constants';
 
@@ -13,23 +12,23 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <TierCard 
-            title="Core Presence"
-            price="2,000"
-            desc="One-page excellence for focused local impact."
-            features={["Fast-track 48h launch", "Mobile-first experience", "Maps integration", "WhatsApp bridge"]}
+            title="Starter Website"
+            price="3,999"
+            desc="For businesses who just want to get online fast."
+            features={["Single page website", "WhatsApp + Call buttons", "Fast loading website", "Delivered in 3 days", "Free hosting included"]}
           />
           <TierCard 
-            title="Elite Suite"
-            price="4,000"
+            title="Business Website"
+            price="7,999"
             highlight={true}
-            desc="Multi-page ecosystem for clinics and institutes."
-            features={["Full Site Architecture", "Custom .in/.com Domain", "Premium Identity Design", "Cloud Optimization", "Priority Support"]}
+            desc="For coaching institutes, academies, and local shops who want to get more inquiries."
+            features={["4 to 6 Pages Structure", "WhatsApp integration on every page", "Google Maps + contact form", "Basic SEO & Google prominence", "Delivered in 5 to 7 days"]}
           />
           <TierCard 
-            title="Custom Scale"
-            price="Custom"
-            desc="Tailored enterprise tools for heavy retail."
-            features={["Inventory Engines", "Booking Automations", "API Architectures", "Dedicated Consultation"]}
+            title="Premium Website"
+            price="12,999"
+            desc="For businesses who want a complete professional online presence."
+            features={["7+ Pages custom layout", "Testimonials & Gallery pages", "Full SEO setup", "Designed to match your brand", "Delivered in 10 days"]}
           />
         </div>
       </div>

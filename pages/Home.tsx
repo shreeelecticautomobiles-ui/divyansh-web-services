@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto max-w-7xl text-center relative z-10 animate-fade-up">
           <div className="inline-block mb-12">
             <span className="px-6 py-2.5 bg-blue-600/5 border border-blue-600/10 text-blue-500 rounded-full text-[10px] font-black uppercase tracking-[0.4em] shadow-2xl">
-              Elevating Indian Business Standards
+              Websites for Local Businesses in Delhi
             </span>
           </div>
           
