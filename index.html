@@ -11,8 +11,14 @@
       :root {
         color-scheme: dark;
       }
-      html {
+      html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
         scroll-behavior: smooth;
+      }
+      * {
+        box-sizing: border-box;
       }
       body {
         font-family: 'Inter', sans-serif;
@@ -20,7 +26,6 @@
         color: #ffffff;
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
       }
       /* Premium Scrollbar */
       ::-webkit-scrollbar {

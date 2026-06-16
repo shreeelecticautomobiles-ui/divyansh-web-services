@@ -56,15 +56,15 @@ const Demos: React.FC = () => {
   ];
 
   return (
-    <div className="py-24 md:py-40 px-6">
+    <div className="py-16 md:py-40 px-4 md:px-6 max-w-full overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
         {/* Header Section */}
-        <div className="text-center mb-16 md:mb-24 animate-fade-up">
-          <h1 className="text-6xl md:text-9xl font-black tracking-tighter mb-6 leading-none text-white uppercase">
+        <div className="text-center mb-12 md:mb-24 animate-fade-up px-2">
+          <h1 className="text-[clamp(2.5rem,10vw,6rem)] md:text-9xl font-black tracking-tighter mb-6 leading-none text-white uppercase">
             OUR WORK<span className="text-blue-500">.</span>
           </h1>
-          <p className="text-zinc-400 text-xl md:text-2xl font-semibold mb-6">
-            4 real client websites delivered in Delhi. Additional designs shown as samples.
+          <p className="text-zinc-400 text-lg md:text-2xl font-semibold mb-6 leading-relaxed">
+            2 real client websites delivered in Delhi. Additional designs shown as samples.
           </p>
           <p className="text-zinc-500 text-sm font-medium">
             👇 Click on any project below to view the live website
@@ -108,17 +108,17 @@ const Demos: React.FC = () => {
                      </div>
                   </div>
 
-                  <div className="absolute bottom-8 left-8 right-8 flex justify-between items-end transition-transform duration-500 group-hover:-translate-y-2">
+                  <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 flex justify-between items-end transition-transform duration-500 group-hover:-translate-y-2">
                     <div>
-                      <span className="text-[10px] font-black text-blue-400 uppercase tracking-[0.4em] mb-2 block">{demo.type}</span>
-                      <h3 className="text-3xl md:text-4xl font-black text-white tracking-tighter leading-tight">{demo.title}</h3>
+                      <span className="text-[9px] md:text-[10px] font-black text-blue-400 uppercase tracking-[0.3em] md:tracking-[0.4em] mb-1 md:mb-2 block">{demo.type}</span>
+                      <h3 className="text-xl md:text-4xl font-black text-white tracking-tighter leading-tight">{demo.title}</h3>
                     </div>
                   </div>
                 </div>
 
                 {/* Visible Action Button for Mobile & Desktop Clarity */}
-                <div className="p-8 bg-zinc-950/50 flex flex-col gap-4">
-                  <div className="w-full py-5 bg-blue-600 text-white text-center font-black text-xl rounded-2xl transition-colors hover:bg-blue-500 shadow-lg shadow-blue-600/20">
+                <div className="p-4 md:p-8 bg-zinc-950/50 flex flex-col gap-4">
+                  <div className="w-full py-4 md:py-5 bg-blue-600 text-white text-center font-black text-lg md:text-xl rounded-xl md:rounded-2xl transition-colors hover:bg-blue-500 shadow-lg shadow-blue-600/20">
                     View Live Demo
                   </div>
                 </div>
@@ -128,15 +128,17 @@ const Demos: React.FC = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-32 p-12 md:p-24 bg-zinc-900 border border-white/5 rounded-[40px] md:rounded-[64px] text-center relative overflow-hidden">
-          <h2 className="text-4xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-none">WANT A WEBSITE <br/> LIKE THESE?</h2>
-          <p className="text-lg md:text-xl text-zinc-500 mb-12 max-w-xl mx-auto font-medium">Get a professional, mobile-friendly website deployed in just 48 hours.</p>
-          <a 
-            href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
-            className="inline-flex items-center gap-6 px-12 py-6 bg-blue-600 text-white rounded-2xl font-black text-xl md:text-2xl hover:bg-blue-500 transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:scale-105"
-          >
-            Start Your Website Now
-          </a>
+        <div className="mt-20 md:mt-32 p-6 md:p-24 bg-zinc-900 border border-white/5 rounded-3xl md:rounded-[64px] text-center relative overflow-hidden px-4 md:px-6">
+          <h2 className="text-[clamp(1.8rem,8vw,4rem)] md:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter leading-none">WANT A WEBSITE <br className="hidden md:block"/> LIKE THESE?</h2>
+          <p className="text-base md:text-xl text-zinc-500 mb-8 md:mb-12 max-w-xl mx-auto font-medium px-2">Get a professional, mobile-friendly website deployed in just 48 hours.</p>
+          <div className="w-full max-w-md mx-auto">
+            <a 
+              href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
+              className="w-full inline-flex items-center justify-center gap-4 px-8 py-4 md:py-6 bg-blue-600 text-white rounded-xl md:rounded-2xl font-black text-lg md:text-2xl hover:bg-blue-500 transition-all duration-300 shadow-2xl shadow-blue-600/30 hover:scale-105"
+            >
+              Start Your Website Now
+            </a>
+          </div>
         </div>
       </div>
     </div>

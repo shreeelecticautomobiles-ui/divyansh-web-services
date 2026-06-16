@@ -152,18 +152,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
 
-      <footer className="bg-black border-t border-white/5 pt-32 pb-16 px-6 relative z-10">
+      <footer className="bg-black border-t border-white/5 pt-16 md:pt-32 pb-16 px-4 md:px-6 relative z-10 max-w-full overflow-x-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
-            <div className="md:col-span-2">
-              <h3 className="text-3xl md:text-4xl font-[900] mb-8 tracking-tighter uppercase leading-tight">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-20 mb-12 md:mb-20 text-center md:text-left">
+            <div className="md:col-span-2 flex flex-col items-center md:items-start">
+              <h3 className="text-3xl md:text-4xl font-[900] mb-6 md:mb-8 tracking-tighter uppercase leading-tight">
                 <span className="text-white">DIVYANSH</span><br/>
                 <span className="text-blue-500">WEB SERVICES.</span>
               </h3>
-              <p className="text-zinc-500 text-xl leading-relaxed max-w-md font-medium">
+              <p className="text-zinc-500 text-base md:text-xl leading-relaxed max-w-md font-medium">
                 Affordable websites for local businesses in Delhi.
               </p>
-              <div className="mt-10 flex gap-6">
+              <div className="mt-6 md:mt-10 flex gap-6 justify-center md:justify-start">
                 {['LinkedIn', 'Twitter', 'Instagram'].map(social => (
                   <span key={social} className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-600 hover:text-blue-500 transition-colors cursor-pointer">
                     {social}
@@ -172,32 +172,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </div>
             </div>
             <div>
-              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-700 mb-8">Resources</h4>
-              <ul className="space-y-4">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3rem] md:tracking-[0.4em] text-zinc-700 mb-4 md:mb-8">Resources</h4>
+              <ul className="space-y-3 md:space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link to={link.path} className="text-zinc-500 hover:text-white transition-all font-medium">{link.name}</Link>
+                    <Link to={link.path} className="text-zinc-500 hover:text-white transition-all font-medium text-sm md:text-base">{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div>
-              <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-zinc-700 mb-8">Contact</h4>
-              <div className="space-y-6">
-                <p className="text-zinc-500 font-medium">{BUSINESS_INFO.location}</p>
-                <a href={`tel:${BUSINESS_INFO.phone}`} className="block text-zinc-200 font-bold hover:text-blue-500 transition-colors">{BUSINESS_INFO.phone}</a>
-                <a href={`mailto:${BUSINESS_INFO.email}`} className="block text-zinc-200 font-bold hover:text-blue-500 transition-colors">{BUSINESS_INFO.email}</a>
+            <div className="flex flex-col items-center md:items-start">
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3rem] md:tracking-[0.4em] text-zinc-700 mb-4 md:mb-8">Contact</h4>
+              <div className="space-y-4 md:space-y-6">
+                <p className="text-zinc-500 font-medium text-sm md:text-base">{BUSINESS_INFO.location}</p>
+                <a href={`tel:${BUSINESS_INFO.phone}`} className="block text-zinc-200 font-bold hover:text-blue-500 transition-colors text-sm md:text-base">{BUSINESS_INFO.phone}</a>
+                <a href={`mailto:${BUSINESS_INFO.email}`} className="block text-zinc-200 font-bold hover:text-blue-500 transition-colors text-sm md:text-base">{BUSINESS_INFO.email}</a>
               </div>
             </div>
           </div>
           
-          <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-8">
-            <p className="text-[10px] text-zinc-800 font-black tracking-[0.3em] uppercase text-center md:text-left">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-8 md:pt-12 border-t border-white/5 gap-6 md:gap-8">
+            <p className="text-[9px] md:text-[10px] text-zinc-800 font-black tracking-[0.3em] uppercase text-center md:text-left">
               © {new Date().getFullYear()} DIVYANSH WEB SERVICES. ALL RIGHTS RESERVED.
             </p>
-            <div className="flex gap-12">
-               <span className="text-[10px] text-zinc-800 font-black tracking-widest cursor-default">PRIVACY</span>
-               <span className="text-[10px] text-zinc-800 font-black tracking-widest cursor-default">TERMS</span>
+            <div className="flex gap-8 md:gap-12 justify-center">
+               <span className="text-[9px] md:text-[10px] text-zinc-800 font-black tracking-widest cursor-default">PRIVACY</span>
+               <span className="text-[9px] md:text-[10px] text-zinc-800 font-black tracking-widest cursor-default">TERMS</span>
             </div>
           </div>
         </div>
