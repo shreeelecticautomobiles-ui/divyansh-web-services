@@ -2,41 +2,52 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BUSINESS_INFO, ROUTES } from '../constants';
+import HeroMockup from '../components/HeroMockup';
 
 const Home: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 pt-[20px] md:pt-[20px] pb-12 overflow-x-hidden max-w-full">
-        <div className="container mx-auto max-w-7xl text-center relative z-10 animate-fade-up w-full">
-          <div className="inline-block mb-8 md:mb-12">
-            <span className="px-4 py-2 bg-blue-600/5 border border-blue-600/10 text-blue-500 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] shadow-2xl">
-              Websites for Local Businesses in Delhi
-            </span>
-          </div>
-          
-          <h1 className="text-[clamp(1.8rem,7.5vw,4.5rem)] md:text-[100px] font-black tracking-tighter leading-[0.9] md:leading-[0.82] mb-10 md:mb-14 text-white">
-            GET MORE CUSTOMERS <br/>
-            <span className="text-gradient">WITH A PROFESSIONAL WEBSITE.</span>
-          </h1>
-          
-          <p className="text-zinc-500 text-lg md:text-2xl max-w-4xl mx-auto mb-12 md:mb-16 font-medium leading-relaxed tracking-tight px-2">
-            I build professional websites for coaching institutes, clinics, and local businesses in Delhi. Fast delivery. Affordable price. Real results.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-10 w-full max-w-md md:max-w-none mx-auto px-4 sm:px-0">
-            <a 
-              href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
-              className="w-full sm:w-auto px-8 md:px-14 py-4 md:py-7 bg-blue-600 text-white rounded-xl md:rounded-2xl font-black text-lg md:text-xl transition-all duration-500 hover:scale-105 glow-blue shadow-3xl shadow-blue-600/40 text-center"
-            >
-              Start Your Project
-            </a>
-            <Link 
-              to={ROUTES.demos}
-              className="w-full sm:w-auto px-8 md:px-14 py-4 md:py-7 bg-white text-black rounded-xl md:rounded-2xl font-black text-lg md:text-xl transition-all duration-500 hover:scale-105 hover:bg-blue-600 hover:text-white group flex items-center justify-center gap-3 shadow-3xl shadow-white/10 text-center"
-            >
-              See All Demos <span className="group-hover:translate-x-2 transition-transform">→</span>
-            </Link>
+        <div className="container mx-auto max-w-7xl relative z-10 animate-fade-up w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Left Column: Heading and CTAs */}
+            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+              <div className="inline-block mb-8 md:mb-12">
+                <span className="px-4 py-2 bg-blue-600/5 border border-blue-600/10 text-blue-500 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] shadow-2xl">
+                  Websites for Local Businesses in Delhi
+                </span>
+              </div>
+              
+              <h1 className="text-[clamp(1.8rem,7.5vw,4.5rem)] md:text-[80px] xl:text-[90px] font-black tracking-tighter leading-[0.9] md:leading-[0.82] mb-10 md:mb-14 text-white">
+                GET MORE CUSTOMERS <br/>
+                <span className="text-gradient">WITH A PROFESSIONAL WEBSITE.</span>
+              </h1>
+              
+              <p className="text-zinc-500 text-lg md:text-2xl max-w-4xl lg:max-w-2xl mb-12 md:mb-16 font-medium leading-relaxed tracking-tight px-2 lg:px-0">
+                I build professional websites for coaching institutes, clinics, and local businesses in Delhi. Fast delivery. Affordable price. Real results.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-6 md:gap-10 w-full max-w-md md:max-w-none px-4 sm:px-0 lg:px-0">
+                <a 
+                  href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}
+                  className="w-full sm:w-auto px-8 md:px-14 py-4 md:py-7 bg-blue-600 text-white rounded-xl md:rounded-2xl font-black text-lg md:text-xl transition-all duration-500 hover:scale-105 glow-blue shadow-3xl shadow-blue-600/40 text-center"
+                >
+                  Start Your Project
+                </a>
+                <Link 
+                  to={ROUTES.demos}
+                  className="w-full sm:w-auto px-8 md:px-14 py-4 md:py-7 bg-white text-black rounded-xl md:rounded-2xl font-black text-lg md:text-xl transition-all duration-500 hover:scale-105 hover:bg-blue-600 hover:text-white group flex items-center justify-center gap-3 shadow-3xl shadow-white/10 text-center"
+                >
+                  See All Demos <span className="group-hover:translate-x-2 transition-transform">→</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column: Hero Image Mockups */}
+            <div className="lg:col-span-5 w-full flex items-center justify-center">
+              <HeroMockup />
+            </div>
           </div>
         </div>
       </section>
