@@ -1,16 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BUSINESS_INFO, ROUTES } from '../constants';
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
+let scrollPosition = 0;
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -18,22 +21,32 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const openMenu = () => {
+    scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    document.body.style.overflow = 'hidden';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    setIsMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    document.body.style.position = '';
+    document.body.style.overflow = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollPosition);
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
-    } else {
-      document.body.style.overflow = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-    }
     return () => {
-      document.body.style.overflow = '';
       document.body.style.position = '';
+      document.body.style.overflow = '';
+      document.body.style.top = '';
       document.body.style.width = '';
     };
-  }, [isMenuOpen]);
+  }, []);
 
   const navLinks = [
     { name: 'Services', path: ROUTES.services },
@@ -61,7 +74,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         }`}
       >
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
-          <Link to="/" className="group flex items-center" onClick={() => setIsMenuOpen(false)}>
+          <Link 
+            to="/" 
+            className="group flex items-center" 
+            onClick={(e) => {
+              if (isMenuOpen) {
+                e.preventDefault();
+                closeMenu();
+                navigate('/');
+                window.scrollTo(0, 0);
+              }
+            }}
+          >
             <span className="text-2xl md:text-3xl font-[900] tracking-tighter transition-all duration-500 group-hover:text-blue-400 uppercase leading-none">
               <span className="text-white">DIVYANSH</span>
               <br className="md:hidden" />
@@ -90,7 +114,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </a>
           </nav>
 
-          <button className="lg:hidden text-white p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button 
+            className="lg:hidden text-white p-2" 
+            style={{ position: 'fixed', zIndex: 10000, top: scrolled ? '16px' : '32px', right: '24px' }}
+            onClick={isMenuOpen ? closeMenu : openMenu}
+          >
             <div className="w-6 h-5 flex flex-col justify-between overflow-hidden">
               <span className={`w-full h-0.5 bg-current transition-transform duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`}></span>
               <span className={`w-full h-0.5 bg-current transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
@@ -101,10 +129,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-[#0a0a0a] overflow-y-auto opacity-100 z-[9999] p-10 flex flex-col justify-center gap-8 animate-fade-up">
+          <div 
+            className="lg:hidden p-10 flex flex-col justify-center gap-8"
+            style={{
+              position: 'fixed',
+              top: '0',
+              left: '0',
+              width: '100vw',
+              height: '100vh',
+              zIndex: 9999,
+              backgroundColor: '#0a0a0a',
+              overflowY: 'auto'
+            }}
+          >
             <button 
               className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all cursor-pointer"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
               aria-label="Close menu"
             >
               <svg className="w-6 h-6 stroke-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,9 +155,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex flex-col gap-6">
               <Link
                 to="/"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                onClick={(e) => {
+                  e.preventDefault();
+                  closeMenu();
+                  navigate('/');
+                  window.scrollTo(0, 0);
                 }}
                 className="text-white font-semibold text-3xl md:text-5xl tracking-tighter hover:text-blue-400 transition-all"
               >
@@ -127,9 +169,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  onClick={(e) => {
+                    e.preventDefault();
+                    closeMenu();
+                    navigate(link.path);
+                    window.scrollTo(0, 0);
                   }}
                   className="text-white font-semibold text-3xl md:text-5xl tracking-tighter hover:text-blue-400 transition-all"
                 >
