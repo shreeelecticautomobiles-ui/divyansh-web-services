@@ -18,6 +18,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   const navLinks = [
     { name: 'Services', path: ROUTES.services },
     { name: 'Portfolio', path: ROUTES.demos },
@@ -84,27 +95,48 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 top-[0px] bg-black/98 backdrop-blur-3xl z-40 p-10 flex flex-col justify-center gap-10 animate-fade-up">
-            <button className="absolute top-8 right-8 text-white" onClick={() => setIsMenuOpen(false)}>
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" /></svg>
-            </button>
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`text-5xl font-black tracking-tighter ${
-                  isActive(link.path) ? 'text-blue-500' : 'text-zinc-700'
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <a 
-              href={`tel:${BUSINESS_INFO.phone}`}
-              className="mt-10 py-6 bg-blue-600 text-white text-center font-black rounded-3xl text-2xl"
+          <div className="lg:hidden fixed inset-0 bg-[#0a0a0a] opacity-100 z-[9999] p-10 flex flex-col justify-center gap-8 animate-fade-up">
+            <button 
+              className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all cursor-pointer"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close menu"
             >
-              Call Agency
+              <svg className="w-6 h-6 stroke-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <div className="flex flex-col gap-6">
+              <Link
+                to="/"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="text-white font-semibold text-3xl md:text-5xl tracking-tighter hover:text-blue-400 transition-all"
+              >
+                Home
+              </Link>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="text-white font-semibold text-3xl md:text-5xl tracking-tighter hover:text-blue-400 transition-all"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            <a 
+              href="https://wa.me/919305972687"
+              className="mt-8 py-5 bg-blue-600 text-white text-center font-black rounded-2xl text-xl hover:bg-blue-500 transition-all duration-300 shadow-[0_0_30px_rgba(37,99,235,0.3)]"
+            >
+              WhatsApp Me
             </a>
           </div>
         )}
