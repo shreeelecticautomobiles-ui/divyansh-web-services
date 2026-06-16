@@ -78,7 +78,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           left: 0,
           width: '100%',
           zIndex: 1000,
-          height: '60px',
+          height: '64px',
         }}
       >
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
@@ -199,7 +199,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         )}
       </header>
-      <div style={{ height: '60px' }}></div>
+      <div style={{ height: '64px' }}></div>
 
       <main className="flex-grow relative z-10">
         {children}

@@ -3,7 +3,7 @@ import { BUSINESS_INFO } from '../constants';
 
 const Pricing: React.FC = () => {
   return (
-    <div className="pt-[80px] md:pt-[90px] pb-16 md:pb-48 px-4 md:px-6 bg-[#0b0b0b] max-w-full overflow-x-hidden">
+    <div className="pt-[20px] md:pt-[20px] pb-16 md:pb-48 px-4 md:px-6 bg-[#0b0b0b] max-w-full overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 md:mb-32 animate-fade-up px-2">
           <h1 className="text-[clamp(2.5rem,10vw,6rem)] md:text-9xl font-black tracking-tighter mb-6 md:mb-10 leading-none text-white uppercase">PRICING<span className="text-blue-500">.</span></h1>
