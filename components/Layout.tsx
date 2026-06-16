@@ -21,11 +21,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
     } else {
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
     }
     return () => {
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
     };
   }, [isMenuOpen]);
 
@@ -48,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
 
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
+        className={`fixed top-0 left-0 right-0 z-[10000] transition-all duration-700 ${
           scrolled 
             ? 'py-4 bg-black/60 backdrop-blur-2xl border-b border-white/10' 
             : 'py-8 bg-transparent'
@@ -95,7 +101,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
         {/* Mobile Menu Overlay */}
         {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 bg-[#0a0a0a] opacity-100 z-[9999] p-10 flex flex-col justify-center gap-8 animate-fade-up">
+          <div className="lg:hidden fixed top-0 left-0 w-full h-full bg-[#0a0a0a] overflow-y-auto opacity-100 z-[9999] p-10 flex flex-col justify-center gap-8 animate-fade-up">
             <button 
               className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all cursor-pointer"
               onClick={() => setIsMenuOpen(false)}
