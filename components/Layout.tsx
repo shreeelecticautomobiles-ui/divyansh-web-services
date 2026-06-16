@@ -123,7 +123,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <span className="text-blue-500">WEB SERVICES.</span>
               </h3>
               <p className="text-zinc-500 text-xl leading-relaxed max-w-md font-medium">
-                Designing and engineering digital experiences that define the future of local commerce. One pixel at a time.
+                Affordable websites for local businesses in Delhi.
               </p>
               <div className="mt-10 flex gap-6">
                 {['LinkedIn', 'Twitter', 'Instagram'].map(social => (

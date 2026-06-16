@@ -20,9 +20,14 @@ const Pricing: React.FC = () => {
             <h2 className="text-2xl font-black text-white mb-2 tracking-tighter">Package 1 — Starter Website</h2>
             <p className="text-sm text-zinc-500 mb-6 font-semibold">For businesses who just want to get online fast.</p>
             
-            <div className="flex items-baseline gap-3 mb-8">
-              <span className="text-5xl font-black text-white">₹3,999</span>
-              <span className="text-zinc-600 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+            <div className="flex flex-col gap-2 mb-8">
+              <div className="flex items-baseline gap-3">
+                <span className="text-5xl font-black text-white">₹3,999</span>
+                <span className="text-zinc-600 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+              </div>
+              <p className="text-xs text-red-400 font-semibold leading-snug">
+                Domain not included — costs ₹500–₹800/year separately
+              </p>
             </div>
 
             <ul className="space-y-4 mb-12 flex-grow text-zinc-400 font-medium text-base">
@@ -66,9 +71,14 @@ const Pricing: React.FC = () => {
             <h2 className="text-2xl font-black text-black mb-2 tracking-tighter">Package 2 — Business Website</h2>
             <p className="text-sm text-zinc-500 mb-6 font-semibold">For coaching institutes, academies, and local shops who want to get more inquiries.</p>
             
-            <div className="flex items-baseline gap-3 mb-8">
-              <span className="text-5xl font-black text-black">₹7,999</span>
-              <span className="text-zinc-400 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+            <div className="flex flex-col gap-2 mb-8">
+              <div className="flex items-baseline gap-3">
+                <span className="text-5xl font-black text-black">₹7,999</span>
+                <span className="text-zinc-650 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+              </div>
+              <p className="text-xs text-red-600 font-bold leading-snug">
+                Domain not included — costs ₹500–₹800/year separately
+              </p>
             </div>
 
             <ul className="space-y-4 mb-12 flex-grow text-zinc-700 font-bold text-base">
@@ -114,9 +124,14 @@ const Pricing: React.FC = () => {
             <h2 className="text-2xl font-black text-white mb-2 tracking-tighter">Package 3 — Premium Website</h2>
             <p className="text-sm text-zinc-500 mb-6 font-semibold">For businesses who want a complete professional online presence.</p>
             
-            <div className="flex items-baseline gap-3 mb-8">
-              <span className="text-5xl font-black text-white">₹12,999</span>
-              <span className="text-zinc-600 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+            <div className="flex flex-col gap-2 mb-8">
+              <div className="flex items-baseline gap-3">
+                <span className="text-5xl font-black text-white">₹12,999</span>
+                <span className="text-zinc-600 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+              </div>
+              <p className="text-xs text-red-400 font-semibold leading-snug">
+                Domain not included — costs ₹500–₹800/year separately
+              </p>
             </div>
 
             <ul className="space-y-4 mb-12 flex-grow text-zinc-400 font-medium text-base">
@@ -176,7 +191,7 @@ const Pricing: React.FC = () => {
           <h3 className="text-[10px] font-black mb-8 text-zinc-600 uppercase tracking-[0.5em]">The Payment Terms</h3>
           <p className="text-zinc-300 flex flex-col md:flex-row items-center justify-center gap-6 text-xl font-medium">
             <span className="bg-white/5 p-4 rounded-2xl border border-white/5">🛡️</span> 
-            <span><strong>50% Retainer</strong> (On commencement) &nbsp;—&nbsp; <strong>50% Finalize</strong> (Post-deployment)</span>
+            <span><strong>50% payment before we start</strong> &nbsp;—&nbsp; <strong>50% payment after your website is ready</strong></span>
           </p>
         </div>
       </div>

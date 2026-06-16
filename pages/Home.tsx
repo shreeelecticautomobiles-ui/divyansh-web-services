@@ -15,14 +15,13 @@ const Home: React.FC = () => {
             </span>
           </div>
           
-          <h1 className="text-7xl md:text-[120px] font-black tracking-tighter leading-[0.82] mb-14">
-            CRAFTING YOUR <br/>
-            <span className="text-gradient">DIGITAL EMPIRE.</span>
+          <h1 className="text-6xl md:text-[100px] font-black tracking-tighter leading-[0.82] mb-14">
+            GET MORE CUSTOMERS <br/>
+            <span className="text-gradient">WITH A PROFESSIONAL WEBSITE.</span>
           </h1>
           
           <p className="text-zinc-500 text-xl md:text-2xl max-w-4xl mx-auto mb-16 font-medium leading-relaxed tracking-tight">
-            We don't just build websites. We engineer high-performance conversion machines for doctors, 
-            educators, and visionary entrepreneurs. Performance. Aesthetics. Results.
+            I build professional websites for coaching institutes, clinics, and local businesses in Delhi. Fast delivery. Affordable price. Real results.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center items-center gap-10">
@@ -34,7 +33,7 @@ const Home: React.FC = () => {
             </a>
             <Link 
               to={ROUTES.demos}
-              className="px-14 py-7 bg-red-600 border border-red-700 text-white rounded-2xl font-black text-xl transition-all duration-500 hover:scale-105 hover:bg-red-700 hover:border-red-800 group flex items-center gap-3 shadow-3xl shadow-red-600/40"
+              className="px-14 py-7 bg-white text-black rounded-2xl font-black text-xl transition-all duration-500 hover:scale-105 hover:bg-blue-600 hover:text-white group flex items-center gap-3 shadow-3xl shadow-white/10"
             >
               See All Demos <span className="group-hover:translate-x-2 transition-transform">→</span>
             </Link>
@@ -47,24 +46,24 @@ const Home: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-32">
             <h2 className="text-[11px] font-black text-blue-500 uppercase tracking-[0.5em] mb-6">The Competitive Edge</h2>
-            <h3 className="text-5xl md:text-7xl font-black tracking-tighter text-white">Why leaders choose us.</h3>
+            <h3 className="text-5xl md:text-7xl font-black tracking-tighter text-white">Why Delhi businesses choose us.</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <TrustCard 
               icon="⚡"
-              title="Radical Speed"
-              desc="48-hour delivery isn't a boast, it's our benchmark. We move at the speed of your business growth."
+              title="Fast Delivery"
+              desc="Most websites delivered within 3 to 7 days. No long waiting."
             />
             <TrustCard 
-              icon="🛡️"
-              title="Enterprise Grade"
-              desc="Cloud-native hosting, SSL encryption, and high-security architecture included in every tier."
+              icon="📱"
+              title="Mobile Friendly"
+              desc="Your website will look perfect on every phone, tablet, and computer."
             />
             <TrustCard 
-              icon="💰"
-              title="Conversion DNA"
-              desc="Every layout is optimized to drive phone calls and WhatsApp inquiries. We turn visitors into clients."
+              icon="💬"
+              title="More WhatsApp Inquiries"
+              desc="Every page has a WhatsApp button so customers can contact you directly."
             />
           </div>
         </div>
@@ -84,10 +83,10 @@ const Home: React.FC = () => {
             </div>
             
             <div className="flex-1 grid grid-cols-1 gap-10">
-              <ProcessStep num="01" title="Strategic Discovery" desc="We analyze your local competition and define your digital value proposition." />
-              <ProcessStep num="02" title="Architectural Design" desc="High-fidelity wireframing focused on ultra-mobile responsiveness." />
-              <ProcessStep num="03" title="Precision Engineering" desc="Code optimization for sub-1s load times and SEO dominance." />
-              <ProcessStep num="04" title="Live Deployment" desc="Global launch with integrated analytics and lead tracking systems." />
+              <ProcessStep num="01" title="We Talk" desc="You tell me about your business, your services, and what you need." />
+              <ProcessStep num="02" title="I Design" desc="I build your complete website with your content, photos, and branding." />
+              <ProcessStep num="03" title="You Review" desc="I share a preview. You give feedback. I make changes." />
+              <ProcessStep num="04" title="Goes Live" desc="Your website is published and ready to get you customers." />
             </div>
           </div>
         </div>
@@ -125,11 +124,11 @@ const Home: React.FC = () => {
       <section className="py-56 px-6 relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-blue-600/10 blur-[200px] pointer-events-none"></div>
         <div className="container mx-auto max-w-5xl text-center relative z-10 animate-fade-up">
-          <h2 className="text-6xl md:text-9xl font-black tracking-tighter mb-14 leading-none text-white">
-            DOMINATE YOUR <br/> <span className="text-blue-500">LOCAL MARKET.</span>
+          <h2 className="text-5xl md:text-8xl font-black tracking-tighter mb-14 leading-tight text-white">
+            Your Business Deserves <br/> <span className="text-blue-500">a Website That Works.</span>
           </h2>
           <p className="text-zinc-500 text-2xl mb-16 max-w-3xl mx-auto font-medium">
-            Stop losing customers to outdated websites. Upgrade your brand to the <span className="text-white font-black uppercase">Divyansh Web Services</span> standard today.
+            Most local businesses in Delhi lose customers because they have no website or a bad one. I fix that — fast and affordable.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-10">
             <a 

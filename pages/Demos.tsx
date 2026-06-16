@@ -6,63 +6,52 @@ const Demos: React.FC = () => {
   const demos = [
     {
       type: "EDUCATION",
-      title: "Divyansh Coaching",
-      url: "https://divyansh-coaching-lvg6.vercel.app/",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1200",
-      tag: "⭐ Best for Coaching Institutes",
-      highlight: true
-    },
-    {
-      type: "EDUCATION",
       title: "English Journey Institute",
       url: "https://englishjourneyinstitute.in/",
       image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=1200",
+      tag: "✅ Real Client · Education"
     },
     {
-      type: "ACADEMY",
+      type: "EDUCATION",
       title: "Skill Mentor Academy",
       url: "https://skillmentoracademy.com/",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200",
+      tag: "✅ Real Client · Education"
     },
     {
-      type: "BUSINESS",
+      type: "AUTOMOBILES",
       title: "Shree Electric Automobiles",
       url: "https://shreeelectric.in/",
       image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?auto=format&fit=crop&q=80&w=1200",
-      tag: "Perfect Business Website",
-      highlight: true
+      tag: "✅ Real Client · Automobiles"
+    },
+    {
+      type: "HEALTHCARE",
+      title: "Bhagwat Dental Clinic",
+      url: "https://bhagwat-dental-clinic.vercel.app/",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200",
+      tag: "✅ Real Client · Healthcare"
     },
     {
       type: "FITNESS",
       title: "Powerzone Gym",
       url: "https://powerzone-gym.vercel.app/",
       image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=1200",
-      tag: "Modern Gym/Fitness Design",
-      highlight: true
+      tag: "Sample Design · Fitness"
     },
     {
       type: "HEALTHCARE",
       title: "Raj Health Clinic",
       url: "https://raj-health-clinic.vercel.app/",
       image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200",
+      tag: "Sample Design · Healthcare"
     },
     {
-      type: "DENTAL",
-      title: "Bhagwat Dental Clinic",
-      url: "https://bhagwat-dental-clinic.vercel.app/",
-      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      type: "LIFESTYLE",
+      type: "SALOON",
       title: "Wow Unisex Saloon",
       url: "https://wow-unisex-saloon.vercel.app/",
       image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
-    },
-    {
-      type: "MARKETING",
-      title: "Divyansh Ads",
-      url: "https://divyanshads.in/",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      tag: "Sample Design · Saloon"
     }
   ];
 
@@ -71,12 +60,14 @@ const Demos: React.FC = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-24 animate-fade-up">
-          <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-6 leading-none text-white">
-            WEBSITE SAMPLES <br className="hidden md:block" />
-            <span className="text-blue-500">(CLICK TO VIEW)</span>
+          <h1 className="text-6xl md:text-9xl font-black tracking-tighter mb-6 leading-none text-white uppercase">
+            OUR WORK<span className="text-blue-500">.</span>
           </h1>
-          <p className="text-zinc-400 text-xl md:text-2xl font-semibold mb-12">
-            👇 Click on any demo below to view the full website
+          <p className="text-zinc-400 text-xl md:text-2xl font-semibold mb-6">
+            4 real client websites delivered in Delhi. Additional designs shown as samples.
+          </p>
+          <p className="text-zinc-500 text-sm font-medium">
+            👇 Click on any project below to view the live website
           </p>
         </div>
 
@@ -92,7 +83,11 @@ const Demos: React.FC = () => {
               >
                 {/* Highlight Tag */}
                 {demo.tag && (
-                  <div className="absolute top-6 left-6 z-20 px-4 py-2 bg-blue-600 text-white text-xs md:text-sm font-black rounded-full shadow-lg">
+                  <div className={`absolute top-6 left-6 z-20 px-4 py-2 text-xs md:text-sm font-black rounded-full shadow-lg ${
+                    demo.tag.includes('✅ Real Client') 
+                      ? 'bg-emerald-600 text-white' 
+                      : 'bg-zinc-800/95 text-zinc-300 border border-white/10 backdrop-blur-md'
+                  }`}>
                     {demo.tag}
                   </div>
                 )}
