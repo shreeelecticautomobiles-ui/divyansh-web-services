@@ -56,7 +56,7 @@ const Demos: React.FC = () => {
   ];
 
   return (
-    <div className="py-16 md:py-40 px-4 md:px-6 max-w-full overflow-x-hidden">
+    <div className="pt-[80px] md:pt-[90px] pb-16 md:pb-40 px-4 md:px-6 max-w-full overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-24 animate-fade-up px-2">

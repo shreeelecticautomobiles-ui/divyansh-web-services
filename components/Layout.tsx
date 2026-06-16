@@ -67,11 +67,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </div>
 
       <header 
-        className={`fixed top-0 left-0 right-0 z-[10000] transition-all duration-700 ${
+        className={`fixed top-0 left-0 right-0 transition-all duration-700 flex items-center ${
           scrolled 
-            ? 'py-4 bg-black/60 backdrop-blur-2xl border-b border-white/10' 
-            : 'py-8 bg-transparent'
+            ? 'bg-black/60 backdrop-blur-2xl border-b border-white/10' 
+            : 'bg-transparent'
         }`}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100%',
+          zIndex: 1000,
+          height: '60px',
+        }}
       >
         <div className="container mx-auto px-6 max-w-7xl flex justify-between items-center">
           <Link 
@@ -116,7 +124,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           <button 
             className="lg:hidden text-white p-2" 
-            style={{ position: 'fixed', zIndex: 10000, top: scrolled ? '16px' : '32px', right: '24px' }}
+            style={{ position: 'fixed', zIndex: 10000, top: '10px', right: '24px' }}
             onClick={isMenuOpen ? closeMenu : openMenu}
           >
             <div className="w-6 h-5 flex flex-col justify-between overflow-hidden">
@@ -191,6 +199,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
         )}
       </header>
+      <div style={{ height: '60px' }}></div>
 
       <main className="flex-grow relative z-10">
         {children}

@@ -4,7 +4,7 @@ import { BUSINESS_INFO } from '../constants';
 
 const About: React.FC = () => {
   return (
-    <div className="py-16 md:py-24 px-4 md:px-6 bg-[#0b0b0b] max-w-full overflow-x-hidden">
+    <div className="pt-[80px] md:pt-[90px] pb-16 md:pb-24 px-4 md:px-6 bg-[#0b0b0b] max-w-full overflow-x-hidden">
       <div className="container mx-auto max-w-4xl">
         <h1 className="text-[clamp(2.5rem,8vw,4rem)] md:text-6xl font-black text-white mb-10 tracking-tight text-center sm:text-left">Who I Am.</h1>
         

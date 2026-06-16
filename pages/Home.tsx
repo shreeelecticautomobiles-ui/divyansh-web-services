@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 pt-24 pb-12 overflow-x-hidden max-w-full">
+      <section className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 pt-[80px] md:pt-[90px] pb-12 overflow-x-hidden max-w-full">
         <div className="container mx-auto max-w-7xl text-center relative z-10 animate-fade-up w-full">
           <div className="inline-block mb-8 md:mb-12">
             <span className="px-4 py-2 bg-blue-600/5 border border-blue-600/10 text-blue-500 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] shadow-2xl">

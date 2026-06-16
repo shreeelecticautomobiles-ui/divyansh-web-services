@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="py-16 md:py-40 px-4 md:px-6 bg-[#0b0b0b] max-w-full overflow-x-hidden">
+    <div className="pt-[80px] md:pt-[90px] pb-16 md:pb-40 px-4 md:px-6 bg-[#0b0b0b] max-w-full overflow-x-hidden">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-start w-full">
           <div className="animate-fade-up text-center lg:text-left px-2">
