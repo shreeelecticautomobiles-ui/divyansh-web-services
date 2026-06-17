@@ -8,15 +8,26 @@ const Home: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center px-4 md:px-6 pt-28 md:pt-36 lg:pt-32 pb-[60px] overflow-x-hidden max-w-full">
+      <section className="relative min-h-auto flex items-center justify-center px-4 md:px-6 pt-20 lg:pt-[30px] pb-[80px] overflow-x-hidden max-w-full">
         <div className="container mx-auto max-w-7xl relative z-10 animate-fade-up w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
             {/* Left Column: Heading and CTAs */}
             <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left justify-center py-4">
-              <div className="inline-block mb-8 md:mb-12">
-                <span className="px-4 py-2 bg-neutral-950 border border-white/10 text-white rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.35em] shadow-2xl">
-                  WEBSITES FOR LOCAL BUSINESSES IN DELHI
-                </span>
+              <div 
+                style={{
+                  display: 'inline-block',
+                  border: '1px solid rgba(255,255,255,0.3)',
+                  borderRadius: '999px',
+                  padding: '6px 16px',
+                  fontSize: '11px',
+                  letterSpacing: '2px',
+                  color: 'white',
+                  marginBottom: '24px',
+                  textTransform: 'uppercase'
+                }} 
+                className="font-bold font-sans bg-neutral-950/40"
+              >
+                WEBSITES FOR LOCAL BUSINESSES IN DELHI
               </div>
               
               <h1 className="text-[clamp(1.8rem,7.5vw,4.5rem)] md:text-[80px] xl:text-[90px] font-black tracking-tighter leading-[0.9] md:leading-[0.82] mb-10 md:mb-14 text-white">
