@@ -8,14 +8,14 @@ const Home: React.FC = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-4 md:px-6 pt-[20px] md:pt-[20px] pb-12 overflow-x-hidden max-w-full">
+      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center px-4 md:px-6 pt-28 md:pt-36 lg:pt-32 pb-[60px] overflow-x-hidden max-w-full">
         <div className="container mx-auto max-w-7xl relative z-10 animate-fade-up w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
             {/* Left Column: Heading and CTAs */}
-            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left justify-center py-4">
               <div className="inline-block mb-8 md:mb-12">
-                <span className="px-4 py-2 bg-blue-600/5 border border-blue-600/10 text-blue-500 rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] shadow-2xl">
-                  Websites for Local Businesses in Delhi
+                <span className="px-4 py-2 bg-neutral-950 border border-white/10 text-white rounded-full text-[9px] md:text-[10px] font-black uppercase tracking-[0.25em] md:tracking-[0.35em] shadow-2xl">
+                  WEBSITES FOR LOCAL BUSINESSES IN DELHI
                 </span>
               </div>
               
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
             </div>
 
             {/* Right Column: Hero Image Mockups */}
-            <div className="lg:col-span-5 w-full flex items-center justify-center">
+            <div className="lg:col-span-6 w-full flex items-center justify-center lg:self-center py-4">
               <HeroMockup />
             </div>
           </div>
