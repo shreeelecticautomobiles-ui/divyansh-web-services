@@ -35,7 +35,7 @@ const Home: React.FC = () => {
                 <span className="text-gradient">WITH A PROFESSIONAL WEBSITE.</span>
               </h1>
               
-              <p className="text-zinc-500 text-lg md:text-2xl max-w-4xl lg:max-w-2xl mb-12 md:mb-16 font-medium leading-relaxed tracking-tight px-2 lg:px-0">
+              <p className="text-zinc-300 text-lg md:text-2xl max-w-4xl lg:max-w-2xl mb-12 md:mb-16 font-medium leading-relaxed tracking-tight px-2 lg:px-0">
                 I build professional websites for coaching institutes, clinics, and local businesses in Delhi. Fast delivery. Affordable price. Real results.
               </p>
               
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
             <div className="flex-1 text-center lg:text-left">
               <h2 className="text-[10px] md:text-[11px] font-black text-blue-500 uppercase tracking-[0.4em] md:tracking-[0.5em] mb-6 md:mb-8">The Workflow</h2>
               <h3 className="text-[clamp(1.8rem,6vw,4rem)] md:text-7xl font-black tracking-tighter text-white leading-tight lg:leading-none mb-8 md:mb-10">From Idea to <br className="hidden lg:block"/>Impact in 4 Steps.</h3>
-              <p className="text-zinc-500 text-lg md:text-xl font-medium leading-relaxed max-w-lg mb-10 md:mb-12 mx-auto lg:mx-0">
+              <p className="text-zinc-300 text-lg md:text-xl font-medium leading-relaxed max-w-lg mb-10 md:mb-12 mx-auto lg:mx-0">
                 I map out, design, and launch your customized business website, ensuring everything is handled while you focus on operations.
               </p>
               <Link to={ROUTES.pricing} className="inline-block text-blue-500 font-black text-xs md:text-sm uppercase tracking-widest hover:text-white transition-colors">See Pricing Details →</Link>
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
       <section className="py-20 md:py-48 px-4 md:px-6 bg-[#0d0d0d]/80 border-t border-white/5 max-w-full overflow-x-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12 md:mb-24 px-2">
-            <h2 className="text-[10px] font-black text-zinc-700 uppercase tracking-[0.4em] md:tracking-[0.5em] mb-4 md:mb-6">Client Echoes</h2>
+            <h2 className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.4em] md:tracking-[0.5em] mb-4 md:mb-6">Client Echoes</h2>
             <h3 className="text-3xl md:text-4xl font-black tracking-tighter text-white">Trusted by Local Leaders.</h3>
           </div>
           
@@ -149,7 +149,7 @@ const Home: React.FC = () => {
           <h2 className="text-[clamp(1.8rem,7vw,4.5rem)] md:text-8xl font-black tracking-tighter mb-8 md:mb-14 leading-tight text-white px-2">
             Your Business Deserves <br/> <span className="text-blue-500">a Website That Works.</span>
           </h2>
-          <p className="text-zinc-500 text-lg md:text-2xl mb-10 md:mb-16 max-w-3xl mx-auto font-medium px-4">
+          <p className="text-zinc-300 text-lg md:text-2xl mb-10 md:mb-16 max-w-3xl mx-auto font-medium px-4">
             Most local businesses in Delhi lose customers because they have no website or a bad one. I fix that — fast and affordable.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6 md:gap-10 w-full max-w-md md:max-w-none mx-auto px-4 sm:px-0">
@@ -170,16 +170,16 @@ const TrustCard = ({ icon, title, desc }: { icon: string, title: string, desc: s
   <div className="group p-6 md:p-14 bg-zinc-900/30 border border-white/5 rounded-3xl md:rounded-[48px] hover:border-blue-500/50 transition-all duration-700 hover:shadow-2xl hover:-translate-y-4">
     <div className="text-4xl md:text-5xl mb-6 md:mb-10 group-hover:scale-110 transition-transform inline-block">{icon}</div>
     <h3 className="text-2xl md:text-3xl font-black text-white mb-4 md:mb-6 tracking-tight">{title}</h3>
-    <p className="text-zinc-500 text-base md:text-lg leading-relaxed font-medium">{desc}</p>
+    <p className="text-zinc-300 text-base md:text-lg leading-relaxed font-medium">{desc}</p>
   </div>
 );
 
 const ProcessStep = ({ num, title, desc }: { num: string, title: string, desc: string }) => (
   <div className="flex gap-6 md:gap-10 items-start group">
-    <div className="text-lg md:text-xl font-black text-zinc-800 tracking-widest pt-1 group-hover:text-blue-500 transition-colors">{num}</div>
+    <div className="text-lg md:text-xl font-black text-zinc-300 tracking-widest pt-1 group-hover:text-blue-500 transition-colors">{num}</div>
     <div>
       <h4 className="text-xl md:text-2xl font-black text-white mb-2 md:mb-3 tracking-tight group-hover:text-blue-400 transition-colors">{title}</h4>
-      <p className="text-zinc-500 text-base md:text-lg font-medium leading-relaxed">{desc}</p>
+      <p className="text-zinc-300 text-base md:text-lg font-medium leading-relaxed">{desc}</p>
     </div>
   </div>
 );
@@ -187,12 +187,12 @@ const ProcessStep = ({ num, title, desc }: { num: string, title: string, desc: s
 const TestimonialCard = ({ name, role, quote }: { name: string, role: string, quote: string }) => (
   <div className="p-6 md:p-12 glass rounded-3xl md:rounded-[40px] border border-white/5 hover:border-blue-500/30 transition-all">
     <div className="text-blue-500 text-3xl md:text-4xl mb-6">“</div>
-    <p className="text-zinc-400 text-base md:text-lg italic mb-6 md:mb-10 font-medium leading-relaxed">
+    <p className="text-zinc-300 text-base md:text-lg italic mb-6 md:mb-10 font-medium leading-relaxed">
       {quote}
     </p>
     <div>
-      <h5 className="text-white font-black text-base md:text-lg tracking-tight">{name}</h5>
-      <p className="text-zinc-600 font-bold text-[10px] md:text-xs uppercase tracking-widest mt-1">{role}</p>
+      <h4 className="text-white font-black text-base md:text-lg tracking-tight">{name}</h4>
+      <p className="text-zinc-300 font-bold text-[10px] md:text-xs uppercase tracking-widest mt-1">{role}</p>
     </div>
   </div>
 );

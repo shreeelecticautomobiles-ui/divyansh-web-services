@@ -7,7 +7,7 @@ const Pricing: React.FC = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 md:mb-32 animate-fade-up px-2">
           <h1 className="text-[clamp(2.5rem,10vw,6rem)] md:text-9xl font-black tracking-tighter mb-6 md:mb-10 leading-none text-white uppercase">PRICING<span className="text-blue-500">.</span></h1>
-          <p className="text-zinc-500 text-lg md:text-2xl max-w-3xl mx-auto font-medium">
+          <p className="text-zinc-400 text-lg md:text-2xl max-w-3xl mx-auto font-medium">
             Straightforward investment structure. No hidden fees. Just websites that get you more customers.
           </p>
         </div>
@@ -18,12 +18,12 @@ const Pricing: React.FC = () => {
           {/* Starter Plan */}
           <div className="bg-zinc-900/40 backdrop-blur-3xl border border-white/5 rounded-3xl md:rounded-[48px] p-6 md:p-12 flex flex-col hover:border-blue-500/20 transition-all duration-700 relative w-full mx-auto">
             <h2 className="text-xl md:text-2xl font-black text-white mb-2 tracking-tighter">Package 1 — Starter Website</h2>
-            <p className="text-xs md:text-sm text-zinc-500 mb-6 font-semibold">For businesses who just want to get online fast.</p>
+            <p className="text-xs md:text-sm text-zinc-400 mb-6 font-semibold">For businesses who just want to get online fast.</p>
             
             <div className="flex flex-col gap-2 mb-6 md:mb-8">
               <div className="flex items-baseline gap-3">
                 <span className="text-4xl md:text-5xl font-black text-white">₹3,999</span>
-                <span className="text-zinc-650 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+                <span className="text-zinc-400 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
               </div>
               <p className="text-xs text-red-400 font-semibold leading-snug">
                 Domain not included — costs ₹500–₹800/year separately
@@ -122,12 +122,12 @@ const Pricing: React.FC = () => {
           {/* Premium Plan */}
           <div className="bg-zinc-900/40 backdrop-blur-3xl border border-white/5 rounded-3xl md:rounded-[48px] p-6 md:p-12 flex flex-col hover:border-blue-500/20 transition-all duration-700 relative w-full mx-auto">
             <h2 className="text-xl md:text-2xl font-black text-white mb-2 tracking-tighter">Package 3 — Premium Website</h2>
-            <p className="text-xs md:text-sm text-zinc-500 mb-6 font-semibold">For businesses who want a complete professional online presence.</p>
+            <p className="text-xs md:text-sm text-zinc-400 mb-6 font-semibold">For businesses who want a complete professional online presence.</p>
             
             <div className="flex flex-col gap-2 mb-6 md:mb-8">
               <div className="flex items-baseline gap-3">
                 <span className="text-4xl md:text-5xl font-black text-white">₹12,999</span>
-                <span className="text-zinc-650 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
+                <span className="text-zinc-400 font-extrabold uppercase tracking-[0.2em] text-[10px]">One-Time</span>
               </div>
               <p className="text-xs text-red-400 font-semibold leading-snug">
                 Domain not included — costs ₹500–₹800/year separately
@@ -188,7 +188,7 @@ const Pricing: React.FC = () => {
 
         {/* Security & Retainer protocol */}
         <div className="glass rounded-2xl md:rounded-[40px] p-6 md:p-12 text-center border border-white/10 max-w-4xl mx-auto w-full px-4">
-          <h3 className="text-[10px] font-black mb-6 md:mb-8 text-zinc-650 uppercase tracking-[0.4em] md:tracking-[0.5em]">The Payment Terms</h3>
+          <h3 className="text-[10px] font-black mb-6 md:mb-8 text-zinc-400 uppercase tracking-[0.4em] md:tracking-[0.5em]">The Payment Terms</h3>
           <p className="text-zinc-300 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 text-lg md:text-xl font-medium">
             <span className="bg-white/5 p-3 md:p-4 rounded-xl md:rounded-2xl border border-white/5">🛡️</span> 
             <span className="leading-relaxed"><strong>50% payment before we start</strong> <br className="md:hidden"/>— <br className="md:hidden"/> <strong>50% payment after your website is ready</strong></span>

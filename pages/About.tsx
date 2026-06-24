@@ -47,12 +47,14 @@ const About: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full max-w-md md:max-w-none mx-auto sm:mx-0">
                <a 
                 href="tel:+919305972687" 
+                aria-label="Call +91 93059 72687"
                 className="w-full sm:w-auto px-6 md:px-10 py-4 bg-zinc-900 text-white rounded-xl font-black shadow-lg hover:bg-zinc-800 transition border border-zinc-800 flex items-center justify-center gap-3 text-center"
               >
                 📞 Voice Call
               </a>
               <a 
                 href="https://wa.me/919305972687" 
+                aria-label="Chat on WhatsApp with Divyansh"
                 className="w-full sm:w-auto px-6 md:px-10 py-4 bg-blue-600 text-white rounded-xl font-black shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:bg-blue-500 transition flex items-center justify-center gap-3 text-center"
               >
                 💬 WhatsApp Chat

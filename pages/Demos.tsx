@@ -66,7 +66,7 @@ const Demos: React.FC = () => {
           <p className="text-zinc-400 text-lg md:text-2xl font-semibold mb-6 leading-relaxed">
             2 real client websites delivered in Delhi. Additional designs shown as samples.
           </p>
-          <p className="text-zinc-500 text-sm font-medium">
+          <p className="text-zinc-400 text-sm font-semibold">
             👇 Click on any project below to view the live website
           </p>
         </div>
@@ -79,6 +79,7 @@ const Demos: React.FC = () => {
                 href={demo.url} 
                 target="_blank" 
                 rel="noreferrer"
+                aria-label={`View live demo website for ${demo.title}`}
                 className="group relative block bg-zinc-900 rounded-[32px] md:rounded-[48px] overflow-hidden border-2 border-white/5 transition-all duration-500 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/10"
               >
                 {/* Highlight Tag */}
@@ -130,7 +131,7 @@ const Demos: React.FC = () => {
         {/* Bottom CTA */}
         <div className="mt-20 md:mt-32 p-6 md:p-24 bg-zinc-900 border border-white/5 rounded-3xl md:rounded-[64px] text-center relative overflow-hidden px-4 md:px-6">
           <h2 className="text-[clamp(1.8rem,8vw,4rem)] md:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter leading-none">WANT A WEBSITE <br className="hidden md:block"/> LIKE THESE?</h2>
-          <p className="text-base md:text-xl text-zinc-500 mb-8 md:mb-12 max-w-xl mx-auto font-medium px-2">Get a professional, mobile-friendly website deployed in just 48 hours.</p>
+          <p className="text-base md:text-xl text-zinc-400 mb-8 md:mb-12 max-w-xl mx-auto font-medium px-2">Get a professional, mobile-friendly website deployed in just 48 hours.</p>
           <div className="w-full max-w-md mx-auto">
             <a 
               href={`https://wa.me/${BUSINESS_INFO.whatsapp}`}

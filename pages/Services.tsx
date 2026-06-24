@@ -7,7 +7,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 md:mb-32 animate-fade-up px-2">
           <h1 className="text-[clamp(2.5rem,10vw,6rem)] md:text-9xl font-black tracking-tighter mb-6 md:mb-8 text-white uppercase">SOLUTIONS<span className="text-blue-500">.</span></h1>
-          <p className="text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">High-caliber digital architecture for businesses that refuse to look ordinary.</p>
+          <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">High-caliber digital architecture for businesses that refuse to look ordinary.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10 w-full px-2 sm:px-0">
@@ -49,11 +49,11 @@ const TierCard = ({ title, price, desc, features, highlight = false }: any) => (
     )}
     
     <h2 className="text-2xl md:text-3xl font-black tracking-tighter mb-2 md:mb-3 mt-2">{title}</h2>
-    <p className={`text-xs md:text-sm mb-6 md:mb-12 font-semibold ${highlight ? 'text-zinc-500' : 'text-zinc-600'}`}>{desc}</p>
+    <p className={`text-xs md:text-sm mb-6 md:mb-12 font-semibold ${highlight ? 'text-zinc-500' : 'text-zinc-400'}`}>{desc}</p>
     
     <div className="flex items-baseline gap-2 mb-8 md:mb-16">
       <span className="text-4xl md:text-6xl font-black">{price !== 'Custom' && '₹'}{price}</span>
-      <span className={`text-[9px] md:text-[10px] font-black uppercase tracking-widest ${highlight ? 'text-zinc-400' : 'text-zinc-700'}`}>One-Time Investment</span>
+      <span className={`text-[9px] md:text-[10px] font-black uppercase tracking-widest ${highlight ? 'text-zinc-500' : 'text-zinc-400'}`}>One-Time Investment</span>
     </div>
 
     <ul className="space-y-4 md:space-y-6 flex-grow mb-8 md:mb-16 font-bold text-xs md:text-sm">

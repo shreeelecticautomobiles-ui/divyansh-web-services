@@ -108,7 +108,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 key={link.path}
                 to={link.path}
                 className={`text-[12px] font-bold uppercase tracking-[0.25em] transition-all duration-300 hover:text-blue-400 ${
-                  isActive(link.path) ? 'text-blue-500' : 'text-zinc-500'
+                  isActive(link.path) ? 'text-blue-500' : 'text-zinc-400'
                 }`}
               >
                 {link.name}
@@ -126,6 +126,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             className="lg:hidden text-white p-2" 
             style={{ position: 'fixed', zIndex: 10000, top: '10px', right: '24px' }}
             onClick={isMenuOpen ? closeMenu : openMenu}
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
           >
             <div className="w-6 h-5 flex flex-col justify-between overflow-hidden">
               <span className={`w-full h-0.5 bg-current transition-transform duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`}></span>
@@ -213,31 +215,43 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <span className="text-white">DIVYANSH</span><br/>
                 <span className="text-blue-500">WEB SERVICES.</span>
               </h3>
-              <p className="text-zinc-500 text-base md:text-xl leading-relaxed max-w-md font-medium">
+              <p className="text-zinc-400 text-base md:text-xl leading-relaxed max-w-md font-medium">
                 Affordable websites for local businesses in Delhi.
               </p>
               <div className="mt-6 md:mt-10 flex gap-6 justify-center md:justify-start">
-                {['LinkedIn', 'Twitter', 'Instagram'].map(social => (
-                  <span key={social} className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-600 hover:text-blue-500 transition-colors cursor-pointer">
-                    {social}
-                  </span>
-                ))}
+                {['LinkedIn', 'Twitter', 'Instagram'].map(social => {
+                  let ariaLabel = "";
+                  if (social === "Twitter") ariaLabel = "Follow us on Twitter";
+                  else if (social === "Instagram") ariaLabel = "Follow us on Instagram";
+                  else if (social === "LinkedIn") ariaLabel = "Connect on LinkedIn";
+                  return (
+                    <a
+                      key={social}
+                      href={`#${social.toLowerCase()}`}
+                      aria-label={ariaLabel}
+                    >
+                      <span className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-400 hover:text-blue-500 transition-colors cursor-pointer">
+                        {social}
+                      </span>
+                    </a>
+                  );
+                })}
               </div>
             </div>
             <div>
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3rem] md:tracking-[0.4em] text-zinc-700 mb-4 md:mb-8">Resources</h4>
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3rem] md:tracking-[0.4em] text-zinc-400 mb-4 md:mb-8">Resources</h4>
               <ul className="space-y-3 md:space-y-4">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link to={link.path} className="text-zinc-500 hover:text-white transition-all font-medium text-sm md:text-base">{link.name}</Link>
+                    <Link to={link.path} className="text-zinc-400 hover:text-white transition-all font-medium text-sm md:text-base">{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="flex flex-col items-center md:items-start">
-              <h4 className="text-[10px] font-black uppercase tracking-[0.3rem] md:tracking-[0.4em] text-zinc-700 mb-4 md:mb-8">Contact</h4>
+              <h4 className="text-[10px] font-black uppercase tracking-[0.3rem] md:tracking-[0.4em] text-zinc-400 mb-4 md:mb-8">Contact</h4>
               <div className="space-y-4 md:space-y-6">
-                <p className="text-zinc-500 font-medium text-sm md:text-base">{BUSINESS_INFO.location}</p>
+                <p className="text-zinc-400 font-medium text-sm md:text-base">{BUSINESS_INFO.location}</p>
                 <a href={`tel:${BUSINESS_INFO.phone}`} className="block text-zinc-200 font-bold hover:text-blue-500 transition-colors text-sm md:text-base">{BUSINESS_INFO.phone}</a>
                 <a href={`mailto:${BUSINESS_INFO.email}`} className="block text-zinc-200 font-bold hover:text-blue-500 transition-colors text-sm md:text-base">{BUSINESS_INFO.email}</a>
               </div>
@@ -245,12 +259,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
           
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 md:pt-12 border-t border-white/5 gap-6 md:gap-8">
-            <p className="text-[9px] md:text-[10px] text-zinc-800 font-black tracking-[0.3em] uppercase text-center md:text-left">
+            <p className="text-[9px] md:text-[10px] text-zinc-400 font-black tracking-[0.3em] uppercase text-center md:text-left">
               © {new Date().getFullYear()} DIVYANSH WEB SERVICES. ALL RIGHTS RESERVED.
             </p>
             <div className="flex gap-8 md:gap-12 justify-center">
-               <span className="text-[9px] md:text-[10px] text-zinc-800 font-black tracking-widest cursor-default">PRIVACY</span>
-               <span className="text-[9px] md:text-[10px] text-zinc-800 font-black tracking-widest cursor-default">TERMS</span>
+               <span className="text-[9px] md:text-[10px] text-zinc-400 font-black tracking-widest cursor-default">PRIVACY</span>
+               <span className="text-[9px] md:text-[10px] text-zinc-400 font-black tracking-widest cursor-default">TERMS</span>
             </div>
           </div>
         </div>
