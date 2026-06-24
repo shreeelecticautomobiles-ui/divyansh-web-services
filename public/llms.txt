@@ -1,0 +1,28 @@
+# Divyansh Web Services
+
+> Professional website design for local businesses in Delhi, India.
+
+Divyansh Web Services builds affordable, fast, and mobile-friendly websites for coaching institutes, clinics, shops, showrooms, and small businesses across Delhi NCR.
+
+## Services
+
+- Website Design and Development
+- Coaching Institute Websites
+- Small Business Websites
+- Landing Pages
+- SEO Friendly Websites
+
+## Pages
+
+- [Home](https://divyanshwebservices.in/)
+- [Services](https://divyanshwebservices.in/services)
+- [Portfolio](https://divyanshwebservices.in/demos)
+- [Pricing](https://divyanshwebservices.in/pricing)
+- [About](https://divyanshwebservices.in/about)
+- [Contact](https://divyanshwebservices.in/contact)
+
+## Contact
+
+- Phone: +91 93059 72687
+- Email: divyanshwebservices@gmail.com
+- Location: Delhi, India
