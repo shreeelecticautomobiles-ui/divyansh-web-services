@@ -13,13 +13,13 @@ const HeroMockup: React.FC = () => {
 
         {/* Mockup Image container with 16px border-radius, subtle blue glow, and max-height constraint */}
         <img
-          src="https://i.ibb.co/vxFWZQ24/Untitled-design-1-1.png"
-          alt="Client Work Mockups - Skill Mentor Academy & English Journey Institute"
+          src="/portfolio.webp"
+          alt="Client Work Mockups - Skill Mentor Academy and English Journey Institute"
           referrerPolicy="no-referrer"
           loading="eager"
           fetchPriority="high"
-          width="640"
-          height="437"
+          width="606"
+          height="413"
           decoding="async"
           className="w-full h-auto lg:h-[480px] lg:max-h-[480px] lg:w-auto object-contain rounded-[16px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(59,130,246,0.15)] transition-all duration-700 group-hover:scale-[1.015] group-hover:shadow-[0_25px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(59,130,246,0.25)] relative z-10"
         />
