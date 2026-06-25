@@ -49,6 +49,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }, []);
 
   const navLinks = [
+    { name: 'Home', path: '/' },
     { name: 'Services', path: ROUTES.services },
     { name: 'Portfolio', path: ROUTES.demos },
     { name: 'Pricing', path: ROUTES.pricing },
@@ -163,18 +164,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </button>
             
             <div className="flex flex-col gap-6">
-              <Link
-                to="/"
-                onClick={(e) => {
-                  e.preventDefault();
-                  closeMenu();
-                  navigate('/');
-                  window.scrollTo(0, 0);
-                }}
-                className="text-white font-semibold text-3xl md:text-5xl tracking-tighter hover:text-blue-400 transition-all"
-              >
-                Home
-              </Link>
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
